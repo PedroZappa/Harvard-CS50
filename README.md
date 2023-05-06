@@ -1,6 +1,20 @@
-# CS50 Intro to Computer Science - Harvard University <img src="harvard.png" height=20>&nbsp;
+<br>
+<p align="center">
+<img src="harvard.png" alt="logo" height="150"/>
+</p>
+<h1 align="center">
+Harvard CS50x — 2023
+</h1>
 
-## About 
+## Table of Contents
+1. [About](#about)
+2. [Structure](#structure)
+3. [Instructors](#instructors)
+4. [Resources](#resources)
+
+
+
+## About
 
 This is CS50x , Harvard University's introduction to the intellectual enterprises of computer science and the art of programming for majors and non-majors alike, with or without prior programming experience. An entry-level course taught by David J. Malan, CS50x teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, software engineering, and web development. Languages include C, Python, SQL, and JavaScript plus CSS and HTML. Problem sets inspired by real-world domains of biology, cryptography, finance, forensics, and gaming. The on-campus version of CS50x , CS50, is Harvard's largest course.
 
@@ -12,7 +26,7 @@ HarvardX pursues the science of learning. By registering as an online learner in
 
 Harvard University and HarvardX are committed to maintaining a safe and healthy educational and work environment in which no member of the community is excluded from participation in, denied the benefits of, or subjected to discrimination or harassment in our program. All members of the HarvardX community are expected to abide by Harvard policies on nondiscrimination, including sexual harassment, and the edX Terms of Service. If you have any questions or concerns, please contact harvardx@harvard.edu and/or report your experience through the edX contact form.
 
-## Structure
+## Structure 
 
 Lecture 00 - Scratch <br>
 Lecture 01 - C <br>
@@ -37,9 +51,14 @@ Brian Yu - Senior Preceptor in Computer Science at Harvard University
 
 ## PedroZappa's CS50 Gradebook
 
+<!-- https://github.com/gepser/markdown-progress -->
+| Week      | Type          | Title       | Grade         |
+| ----------- | ----------- | ----------- | ------------- |
+| 0           | Problem Set | [Scratch]
+
 <hr>
 
-## Links
+## Resources
 
 Presented by EdX - https://www.edx.org/course/introduction-computer-science-harvardx-cs50x
 
