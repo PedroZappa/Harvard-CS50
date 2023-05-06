@@ -53,17 +53,22 @@ Brian Yu - Senior Preceptor in Computer Science at Harvard University
 ## PedroZappa's CS50 Coursework
 
 <!-- https://github.com/gepser/markdown-progress -->
-| Week      | Type          | Title       | 
-| ----------- | ----------- | ----------- | 
-| 0           | Problem Set | [Scratch](C/pset0/) | 
-| 1           | Practice Problems | [Debug](C/pp1/) |
-| 1           | Practice Problems | [Half](C/pp1/) |
-| 1           | Practice Problems | [Prime](C/pp1/) |
-| 1           | Lab 1 | [Population](C/lab1/) |
-| 1           | Problem Set 1 | [Hello](C/pset1/) |
-| 1           | Problem Set 1 | [Mario-less](C/pset1/) |
-| 1           | Problem Set 1 | [Cash](C/pset1/) |
-| 1           | Problem Set 1 | [Credit](C/pset1/) |
+| Week | Type          | Title       | 
+| -----| ----------- | ----------- | 
+| 0    | Problem Set | [Scratch](C/pset0/) | 
+| 1    | Practice Problems | [Debug](C/pp1/) |
+| 1    | Practice Problems | [Half](C/pp1/) |
+| 1    | Practice Problems | [Prime](C/pp1/) |
+| 1    | Lab 1 | [Population](C/lab1/) |
+| 1    | Problem Set 1 | [Hello](C/pset1/) |
+| 1    | Problem Set 1 | [Mario-less](C/pset1/) |
+| 1    | Problem Set 1 | [Cash](C/pset1/) |
+| 1    | Problem Set 1 | [Credit](C/pset1/) |
+| 2    | Lab 2 | [Scrabble](C/lab2/) |
+| 2    | Problem Set 2 | [Scrabble](C/pset2/) |
+| 2    | Problem Set 2 | [Readability](C/pset2/) |
+| 2    | Problem Set 2 | [Bulbs](C/pset2/) |
+| 2    | Problem Set 2 | [Caesar](C/pset2/) |
 
 
 <hr>
