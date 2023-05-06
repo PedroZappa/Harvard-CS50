@@ -10,7 +10,8 @@ Harvard CS50x — 2023
 1. [About](#about)
 2. [Structure](#structure)
 3. [Instructors](#instructors)
-4. [Resources](#resources)
+4. [PedroZappa's CS50 Coursework](#pedrozappas-cs50-coursework)
+5. [Resources](#resources)
 
 
 
@@ -49,12 +50,21 @@ Doug Lloyd - Senior Preceptor in Computer Science at Harvard University
 
 Brian Yu - Senior Preceptor in Computer Science at Harvard University
 
-## PedroZappa's CS50 Gradebook
+## PedroZappa's CS50 Coursework
 
 <!-- https://github.com/gepser/markdown-progress -->
-| Week      | Type          | Title       | Grade         |
-| ----------- | ----------- | ----------- | ------------- |
-| 0           | Problem Set | [Scratch]
+| Week      | Type          | Title       | 
+| ----------- | ----------- | ----------- | 
+| 0           | Problem Set | [Scratch](C/pset0/) | 
+| 1           | Practice Problems | [Debug](C/pp1/) |
+| 1           | Practice Problems | [Half](C/pp1/) |
+| 1           | Practice Problems | [Prime](C/pp1/) |
+| 1           | Lab 1 | [Population](C/lab1/) |
+| 1           | Problem Set 1 | [Hello](C/pset1/) |
+| 1           | Problem Set 1 | [Mario-less](C/pset1/) |
+| 1           | Problem Set 1 | [Cash](C/pset1/) |
+| 1           | Problem Set 1 | [Credit](C/pset1/) |
+
 
 <hr>
 
