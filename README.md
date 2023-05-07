@@ -52,6 +52,7 @@ Brian Yu - Senior Preceptor in Computer Science at Harvard University
 | 2    | Problem Set 2 | [Readability](C/pset2/) |
 | 2    | Problem Set 2 | [Bulbs](C/pset2/) |
 | 2    | Problem Set 2 | [Caesar](C/pset2/) |
+| 3    | Lab 3 |         [Sort](C/lab3/) |
 
 
 <hr>
