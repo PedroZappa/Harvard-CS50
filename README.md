@@ -70,6 +70,8 @@ FreeCodeCamp CS50 - https://www.freecodecamp.org/news/harvard-cs50/
 
 Webpage 2 PDF - https://www.web2pdfconvert.com/
 
+Webpage 2 Markdown - https://codebeautify.org/html-to-markdown
+
 Scratch - https://scratch.mit.edu/
 
 Problem sets - https://cs50.harvard.edu/x/2023/psets/
