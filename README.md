@@ -26,14 +26,6 @@ Lecture 09 - Flask <br>
 Lecture 10 - Emoji <br>
 Cybersecurity <br>
 
-## Instructors
-
-David J. Malan - Gordon Mckay Professor of the Practice of Computer Science at Harvard University
-
-Doug Lloyd - Senior Preceptor in Computer Science at Harvard University
-
-Brian Yu - Senior Preceptor in Computer Science at Harvard University
-
 ## PedroZappa's CS50 Coursework
 
 <!-- https://github.com/gepser/markdown-progress -->
@@ -54,6 +46,7 @@ Brian Yu - Senior Preceptor in Computer Science at Harvard University
 | 2    | Problem Set 2     | [Caesar](C/pset2/) |
 | 3    | Lab 3             | [Sort](C/lab3/) |
 | 3    | Problem Set 3     | [Plurality](C/pset3/) |
+| 3    | Problem Set 3     | [Runoff](C/pset3/) |
 
 
 <hr>
