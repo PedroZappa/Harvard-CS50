@@ -8,7 +8,7 @@ Harvard CS50x — 2023
 
 ## Table of Contents
 1. [Structure](#structure)
-2. [PedroZappa's CS50 Coursework](#pedrozappas-cs50-coursework)
+2. [PedroZappa's Coursework](#pedrozappas-cs50-coursework)
 3. [Course Resources](#course-resources)
 
 ## Structure 
@@ -39,20 +39,21 @@ Brian Yu - Senior Preceptor in Computer Science at Harvard University
 <!-- https://github.com/gepser/markdown-progress -->
 | Week | Type          | Title       | 
 | -----| ----------- | ----------- | 
-| 0    | Problem Set | [Scratch](C/pset0/) | 
+| 0    | Problem Set 0     | [Scratch](C/pset0/) | 
 | 1    | Practice Problems | [Debug](C/pp1/) |
 | 1    | Practice Problems | [Half](C/pp1/) |
 | 1    | Practice Problems | [Prime](C/pp1/) |
-| 1    | Lab 1 | [Population](C/lab1/) |
-| 1    | Problem Set 1 | [Hello](C/pset1/) |
-| 1    | Problem Set 1 | [Mario-less](C/pset1/) |
-| 1    | Problem Set 1 | [Cash](C/pset1/) |
-| 1    | Problem Set 1 | [Credit](C/pset1/) |
-| 2    | Lab 2 | [Scrabble](C/lab2/) |
-| 2    | Problem Set 2 | [Readability](C/pset2/) |
-| 2    | Problem Set 2 | [Bulbs](C/pset2/) |
-| 2    | Problem Set 2 | [Caesar](C/pset2/) |
-| 3    | Lab 3 |         [Sort](C/lab3/) |
+| 1    | Lab 1             | [Population](C/lab1/) |
+| 1    | Problem Set 1     | [Hello](C/pset1/) |
+| 1    | Problem Set 1     | [Mario-less](C/pset1/) |
+| 1    | Problem Set 1     | [Cash](C/pset1/) |
+| 1    | Problem Set 1     | [Credit](C/pset1/) |
+| 2    | Lab 2             | [Scrabble](C/lab2/) |
+| 2    | Problem Set 2     | [Readability](C/pset2/) |
+| 2    | Problem Set 2     | [Bulbs](C/pset2/) |
+| 2    | Problem Set 2     | [Caesar](C/pset2/) |
+| 3    | Lab 3             | [Sort](C/lab3/) |
+| 3    | Problem Set 3     | [Plurality](C/pset3/) |
 
 
 <hr>
@@ -72,6 +73,8 @@ FreeCodeCamp CS50 - https://www.freecodecamp.org/news/harvard-cs50/
 Webpage 2 PDF - https://www.web2pdfconvert.com/
 
 Webpage 2 Markdown - https://codebeautify.org/html-to-markdown
+
+PDF 2 Markdown - https://converter.app/pdf-to-md/
 
 Scratch - https://scratch.mit.edu/
 
