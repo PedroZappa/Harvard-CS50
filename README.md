@@ -47,6 +47,7 @@ Cybersecurity <br>
 | 3    | Lab 3             | [Sort](C/lab3/) |
 | 3    | Problem Set 3     | [Plurality](C/pset3/) |
 | 3    | Problem Set 3     | [Runoff](C/pset3/) |
+| 4    | Practice Problem 4 | [Bottom Up](C/pp4/) |
 
 
 <hr>
