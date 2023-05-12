@@ -32,6 +32,7 @@ Cybersecurity <br>
 | Week | Type          | Title       | 
 | -----| ----------- | ----------- | 
 | 0    | Problem Set 0     | [Scratch](C/pset0/) | 
+| ** | ** | ** |
 | 1    | Practice Problems | [Debug](C/pp1/) |
 | 1    | Practice Problems | [Half](C/pp1/) |
 | 1    | Practice Problems | [Prime](C/pp1/) |
@@ -40,17 +41,24 @@ Cybersecurity <br>
 | 1    | Problem Set 1     | [Mario-less](C/pset1/) |
 | 1    | Problem Set 1     | [Cash](C/pset1/) |
 | 1    | Problem Set 1     | [Credit](C/pset1/) |
+| ** | ** | ** |
 | 2    | Lab 2             | [Scrabble](C/lab2/) |
 | 2    | Problem Set 2     | [Readability](C/pset2/) |
 | 2    | Problem Set 2     | [Bulbs](C/pset2/) |
 | 2    | Problem Set 2     | [Caesar](C/pset2/) |
+| ** | ** | ** |
+| 3    | Practice Problems | [Recursive atoi](C/pp3/) |
+| 3    | Practice Problems | [Average Temperature](C/pp3/) |
+| 3    | Practice Problems | [Max](C/pp3/) |
+| 3    | Practice Problems | [Snackbar](C/pp3/) |
 | 3    | Lab 3             | [Sort](C/lab3/) |
 | 3    | Problem Set 3     | [Plurality](C/pset3/) |
 | 3    | Problem Set 3     | [Runoff](C/pset3/) |
+| ** | ** | ** |
 | 4    | Practice Problem 4 | [Bottom Up](C/pp4/) |
 | 4    | Practice Problem 4 | [License](C/pp4/) |
 | 4    | Lab 4 | [Smiley](C/lab4/smiley/) |
-
+| ** | ** | ** |
 
 <hr>
 
