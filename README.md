@@ -69,6 +69,18 @@ Presented by EdX - https://www.edx.org/course/introduction-computer-science-harv
 
 CS50 Syllabus - https://cs50.harvard.edu/x/2023/
 
+CS50 Codespaces - code.cs50.io
+
+CS50 Problem sets - https://cs50.harvard.edu/x/2023/psets/
+
+CS50 Class page - https://cs50.me/cs50x
+
+CS50 C Manual Pages -  https://manual.cs50.io/
+
+me50/PedroZappa - https://github.com/me50/PedroZappa
+
+PedroZappa/Harvard-CS50 - https://github.com/PedroZappa/Harvard-CS50
+
 Harvard University - https://www.harvard.edu/
 
 CS50 Wikipedia - https://en.wikipedia.org/wiki/CS50
@@ -82,15 +94,5 @@ Webpage 2 Markdown - https://codebeautify.org/html-to-markdown
 PDF 2 Markdown - https://converter.app/pdf-to-md/
 
 Scratch - https://scratch.mit.edu/
-
-Problem sets - https://cs50.harvard.edu/x/2023/psets/
-
-CS50 Class page - https://cs50.me/cs50x
-
-CS50 C Manual Pages -  https://manual.cs50.io/
-
-me50/PedroZappa - https://github.com/me50/PedroZappa
-
-PedroZappa/Harvard-CS50 - https://github.com/PedroZappa/Harvard-CS50
 
 Pixel Art - https://cs50.ly/art
