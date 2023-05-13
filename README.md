@@ -6,12 +6,17 @@
 Harvard CS50x — 2023
 </h1>
 
+___
+___
+
 ## Table of Contents
 1. [Structure](#structure)
 2. [PedroZappa's Coursework](#pedrozappas-cs50-coursework)
 3. [Course Resources](#course-resources)
 
-## Structure 
+___
+
+<h1>Structure</h1>
 
 Lecture 00 - Scratch <br>
 Lecture 01 - C <br>
@@ -26,6 +31,8 @@ Lecture 09 - Flask <br>
 Lecture 10 - Emoji <br>
 Cybersecurity <br>
 
+___
+
 ## PedroZappa's CS50 Coursework
 
 <!-- https://github.com/gepser/markdown-progress -->
@@ -33,7 +40,7 @@ Cybersecurity <br>
  -----| ----------- | -----------  
  `Scratch` 
  0    | Problem Set 0     | [Scratch](C/pset0/)  
- `C` 
+ _ `C` _
  1    | Practice Problems | [Debug](C/pp1/) 
  1    | Practice Problems | [Half](C/pp1/) |
  1    | Practice Problems | [Prime](C/pp1/) 
@@ -42,12 +49,12 @@ Cybersecurity <br>
  1    | Problem Set 1     | [Mario-less](C/pset1/) 
  1    | Problem Set 1     | [Cash](C/pset1/) 
  1    | Problem Set 1     | [Credit](C/pset1/) 
- `Arrays` 
+ _ `Arrays` _
  2    | Lab 2             | [Scrabble](C/lab2/) 
  2    | Problem Set 2     | [Readability](C/pset2/) 
  2    | Problem Set 2     | [Bulbs](C/pset2/) 
  2    | Problem Set 2     | [Caesar](C/pset2/) 
- `Algorithms` 
+ _ `Algorithms` _
  3    | Practice Problems | [Recursive atoi](C/pp3/) 
  3    | Practice Problems | [Average Temperature](C/pp3/) 
  3    | Practice Problems | [Max](C/pp3/) 
@@ -55,10 +62,12 @@ Cybersecurity <br>
  3    | Lab 3             | [Sort](C/lab3/) 
  3    | Problem Set 3     | [Plurality](C/pset3/) 
  3    | Problem Set 3     | [Runoff](C/pset3/) 
- `Memory` 
+ _ `Memory` _
  4    | Practice Problem 4 | [Bottom Up](C/pp4/) 
  4    | Practice Problem 4 | [License](C/pp4/) 
  4    | Lab 4              | [Smiley](C/lab4/smiley/) 
+ 4    | Problem Set 4     | [Filter-less](C/pset4/filter-less/)
+
  ** | ** 
 
 <hr>
