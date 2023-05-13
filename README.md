@@ -69,7 +69,7 @@ Presented by EdX - https://www.edx.org/course/introduction-computer-science-harv
 
 CS50 Syllabus - https://cs50.harvard.edu/x/2023/
 
-CS50 Codespaces - code.cs50.io
+CS50 Codespaces - https://code.cs50.io
 
 CS50 Problem sets - https://cs50.harvard.edu/x/2023/psets/
 
