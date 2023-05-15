@@ -66,8 +66,10 @@ ___
  4    | Practice Problem 4 | [Bottom Up](C/pp4/) 
  4    | Practice Problem 4 | [License](C/pp4/) 
  4    | Lab 4              | [Smiley](C/lab4/smiley/) 
+ 4    | Lab 4              | [Volume](C/lab4/volume/) 
  4    | Problem Set 4     | [Filter-less](C/pset4/filter-less/)
  4    | Problem Set 4     | [Recover](C/pset4/recover/)
+ _ `Data Structures` _
 
  ** | ** 
 
