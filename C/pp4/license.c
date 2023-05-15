@@ -9,7 +9,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Create buffer to read into
+    // Create buffer to read each element into
     char buffer[7];
 
     // Create array to store plate numbers
@@ -19,9 +19,10 @@ int main(int argc, char *argv[])
     // Pointer to external file
     FILE *infile = fopen(argv[1], "r");
 
-    // stores index of each plates[] element
+    // to store index of each plates[] element
     int idx = 0;
 
+    // Read each element into buffer
     // Loop through plates
     while (fread(buffer, 1, 7, infile) == 7)
     {
