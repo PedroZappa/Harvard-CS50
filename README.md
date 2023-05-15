@@ -10,26 +10,8 @@ ___
 ___
 
 ## Table of Contents
-1. [Structure](#structure)
-2. [PedroZappa's Coursework](#pedrozappas-cs50-coursework)
-3. [Course Resources](#course-resources)
-
-___
-
-<h1>Structure</h1>
-
-Lecture 00 - Scratch <br>
-Lecture 01 - C <br>
-Lecture 02 - Arrays <br>
-Lecture 03 - Algorithms <br>
-Lecture 04 - Memory <br>
-Lecture 05 - Data Structures <br>
-Lecture 06 - Python <br>
-Lecture 07 - SQL <br>
-Lecture 08 - HTML, CSS, JavaScript <br>
-Lecture 09 - Flask <br>
-Lecture 10 - Emoji <br>
-Cybersecurity <br>
+- [PedroZappa's Coursework](#pedrozappas-cs50-coursework)
+- [Course Resources](#course-resources)
 
 ___
 
@@ -75,9 +57,11 @@ ___
 
 <hr>
 
-## Course Resources
+## [Course Resources](#course-resources)
 
 Presented by EdX - https://www.edx.org/course/introduction-computer-science-harvardx-cs50x
+
+Harvard University - https://www.harvard.edu/
 
 CS50 Syllabus - https://cs50.harvard.edu/x/2023/
 
@@ -91,20 +75,10 @@ CS50 C Manual Pages -  https://manual.cs50.io/
 
 me50/PedroZappa - https://github.com/me50/PedroZappa
 
-PedroZappa/Harvard-CS50 - https://github.com/PedroZappa/Harvard-CS50
-
-Harvard University - https://www.harvard.edu/
-
-CS50 Wikipedia - https://en.wikipedia.org/wiki/CS50
-
-FreeCodeCamp CS50 - https://www.freecodecamp.org/news/harvard-cs50/
-
 Webpage 2 PDF - https://www.web2pdfconvert.com/
 
 Webpage 2 Markdown - https://codebeautify.org/html-to-markdown
 
 PDF 2 Markdown - https://converter.app/pdf-to-md/
-
-Scratch - https://scratch.mit.edu/
 
 Pixel Art - https://cs50.ly/art
