@@ -34,6 +34,7 @@ ___
   _ `Arrays` _
   2    | Practice Problems | [Hours](C/pp2/)
   2    | Practice Problems | [N0 V0w3ls](C/pp2/)
+  2    | Practice Problems | [Password](C/pp2/)
   2    | Lab 2             | [Scrabble](C/lab2/) 
   2    | Problem Set 2     | [Readability](C/pset2/) 
   2    | Problem Set 2     | [Bulbs](C/pset2/) 
