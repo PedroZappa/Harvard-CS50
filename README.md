@@ -6,9 +6,6 @@
 Harvard CS50x — 2023
 </h1>
 
-___
-___
-
 ## Table of Contents
 - [PedroZappa's Coursework](#pedrozappas-cs50-coursework)
 - [Course Resources](#course-resources)
@@ -56,6 +53,8 @@ ___
   4    | Problem Set 4     | [Filter-less](C/pset4/filter-less/)
   4    | Problem Set 4     | [Recover](C/pset4/recover/)
   _ `Data Structures` _
+  5    | Practice Problem 5 | [Trie](C/pp5/trie/) 
+
 
   ** | ** 
 
