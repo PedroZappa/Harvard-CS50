@@ -24,6 +24,7 @@ ___
   :---:| ------------: | :---------
   _ `Scratch` _
   0    | Problem Set 0     | [Scratch](C/pset0/)
+  | | |
   _ `C` _
   1    | Practice Problems 1 | [Debug](C/pp1/) 
   1    | Practice Problems 1 | [Half](C/pp1/) |
@@ -32,15 +33,17 @@ ___
   1    | Problem Set 1       | [Hello](C/pset1/) 
   1    | Problem Set 1       | [Mario-less](C/pset1/) 
   1    | Problem Set 1       | [Cash](C/pset1/) 
-  1    | Problem Set 1       | [Credit](C/pset1/) 
-  _ `Arrays` _
+  1    | Problem Set 1       | [Credit](C/pset1/)
+  | | |
+  _ `Arrays` _ 
   2    | Practice Problems 2 | [Hours](C/pp2/)
   2    | Practice Problems 2 | [N0 V0w3ls](C/pp2/)
   2    | Practice Problems 2 | [Password](C/pp2/)
   2    | Lab 2               | [Scrabble](C/lab2/) 
   2    | Problem Set 2       | [Readability](C/pset2/) 
   2    | Problem Set 2       | [Bulbs](C/pset2/) 
-  2    | Problem Set 2       | [Caesar](C/pset2/) 
+  2    | Problem Set 2       | [Caesar](C/pset2/)
+  | | |
   _ `Algorithms` _
   3    | Practice Problems 3 | [Recursive atoi](C/pp3/) 
   3    | Practice Problems 3 | [Average Temperature](C/pp3/) 
@@ -50,6 +53,7 @@ ___
   3    | Problem Set 3       | [Plurality](C/pset3/) 
   3    | Problem Set 3       | [Runoff](C/pset3/)
   3    | Problem Set 3       | [Tideman](C/pset3/)
+  | | |
   _ `Memory` _
   4    | Practice Problem 4 | [Bottom Up](C/pp4/) 
   4    | Practice Problem 4 | [License](C/pp4/) 
@@ -57,8 +61,11 @@ ___
   4    | Lab 4              | [Volume](C/lab4/volume/) 
   4    | Problem Set 4      | [Filter-less](C/pset4/filter-less/)
   4    | Problem Set 4      | [Recover](C/pset4/recover/)
+  | | |
   _ `Data Structures` _
-  5    | Practice Problem 5 | [Trie](C/pp5/trie/) 
+  5    | Practice Problem 5 | [Trie](C/pp5/trie/)
+
+___
 
   ## ** [ [Course Notes](#course-notes) ] ** 
 
