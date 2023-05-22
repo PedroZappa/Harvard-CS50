@@ -7,17 +7,18 @@ Harvard CS50x — 2023
 </h1>
 <center>
 
-## Table of Contents
+## Table o'Contents
 
-[PedroZappa's Coursework](#pedrozappas-cs50-coursework)
+[CourseWork](#pedrozappas-cs50-coursework)
 
-[Course Notes](#course-notes)
+[Notes](#course-notes)
 
 [Course Resources](#course-resources)
 
 ___
+___
 
-## ** [ [`PedroZappa's CS50 Coursework`](#pedrozappas-cs50-coursework) ] **
+## ** [ [`CourseWork`](#pedrozappas-cs50-coursework) ] **
 
 <!-- https://github.com/gepser/markdown-progress -->
   Module | Type          | Title
@@ -64,10 +65,12 @@ ___
   | | |
   _ `Data Structures` _
   5    | Practice Problem 5 | [Trie](C/pp5/trie/)
+  5    | Lab 5              | [Inheritance](/C/lab5/)
 
 ___
+___
 
-  ## ** [ [Course Notes](#course-notes) ] ** 
+  ## ** [ [Notes](#course-notes) ] ** 
 
   Module     | Topic           | Notes
   :--------: | :------:        | :---:
@@ -77,25 +80,27 @@ ___
 |  1         |      `C`          | [Section 1](/Notes/Sections/Section_1.md)
 |   1        |                 | [Shorts 1](/Notes/Shorts/Shorts_1.md)
 | | |
-  2          |                 | [Lecture 2](/Notes/Lectures/Lecture_2.md)
-|  2         |    `Arrays`       | [Section 2](/Notes/Sections/Section_2.md)
+  2          |    `Arrays`     | [Lecture 2](/Notes/Lectures/Lecture_2.md)
+|  2         |                | [Section 2](/Notes/Sections/Section_2.md)
 |  2         |                 | [Shorts 2](/Notes/Shorts/Shorts_2.md)
 | | |
-  3           |                 | [Lecture 3](/Notes/Lectures/Lecture_3.md)
-| 3           | `Algorithms`      | [Section 3](/Notes/Sections/Section_3.md)
+  3           |  `Algorithms`    | [Lecture 3](/Notes/Lectures/Lecture_3.md)
+| 3           |                | [Section 3](/Notes/Sections/Section_3.md)
 | 3           |                 | [Shorts 3](/Notes/Shorts/Shorts_3.md)
 | | |
-  4           |                 | [Lecture 4](/Notes/Lectures/Lecture_4.md)
-|  4          |     `Memory`      | [Section 4](/Notes/Sections/Section_4.md)
+  4           |     `Memory`   | [Lecture 4](/Notes/Lectures/Lecture_4.md)
+|  4          |                 | [Section 4](/Notes/Sections/Section_4.md)
 | 4           |                 | [Shorts 4](/Notes/Shorts/Shorts_4.md)
 | | |
-  5           |                 | [Lecture 5](/Notes/Lectures/Lecture_5.md)
-|   5         | `Data Structures` | [Section 5](/Notes/Sections/Section_5.md)
+  5           | `Data Structures`    | [Lecture 5](/Notes/Lectures/Lecture_5.md)
+|   5         |                 | [Section 5](/Notes/Sections/Section_5.md)
 |  5          |                 | [Shorts 5](/Notes/Shorts/Shorts_5.md)
 | | |
 
 
-<hr>
+___
+___
+
 
 ## [Course Resources](#course-resources)
 
