@@ -24,49 +24,49 @@ ___
   Module | Type          | Title
   :---:| ------------: | :---------
   _ `Scratch` _
-  0    | Problem Set 0     | [Scratch](C/pset0/)
+  0    | Problem Set 0     | [Scratch](/C/ProblemSets/pset0/KeyboardPiano_CS50.sb3)
   | | |
   _ `C` _
-  1    | Practice Problems 1 | [Debug](C/pp1/) 
-  1    | Practice Problems 1 | [Half](C/pp1/) |
-  1    | Practice Problems 1 | [Prime](C/pp1/) 
-  1    | Lab 1               | [Population](C/lab1/) 
-  1    | Problem Set 1       | [Hello](C/pset1/) 
-  1    | Problem Set 1       | [Mario-less](C/pset1/) 
-  1    | Problem Set 1       | [Cash](C/pset1/) 
-  1    | Problem Set 1       | [Credit](C/pset1/)
+  1    | Practice Problems 1 | [Debug](/C/PracticeProblems/pp1/debug.c)
+  1    | Practice Problems 1 | [Half](/C/PracticeProblems/pp1/half.c)
+  1    | Practice Problems 1 | [Prime](/C/PracticeProblems/pp1/prime.c)
+  1    | Lab 1               | [Population](/C/Labs/lab1/population.c)
+  1    | Problem Set 1       | [Hello](/C/ProblemSets/pset1/hello.c)
+  1    | Problem Set 1       | [Mario-less](/C/ProblemSets/pset1/mario.c)
+  1    | Problem Set 1       | [Cash](/C/ProblemSets/pset1/cash.c)
+  1    | Problem Set 1       | [Credit](/C/ProblemSets/pset1/credit.c)
   | | |
   _ `Arrays` _ 
-  2    | Practice Problems 2 | [Hours](C/pp2/)
-  2    | Practice Problems 2 | [N0 V0w3ls](C/pp2/)
-  2    | Practice Problems 2 | [Password](C/pp2/)
-  2    | Lab 2               | [Scrabble](C/lab2/) 
-  2    | Problem Set 2       | [Readability](C/pset2/) 
-  2    | Problem Set 2       | [Bulbs](C/pset2/) 
-  2    | Problem Set 2       | [Caesar](C/pset2/)
+  2    | Practice Problems 2 | [Hours](/C/PracticeProblems/pp2/hours.c)
+  2    | Practice Problems 2 | [N0 V0w3ls](/C/PracticeProblems/pp2/no-vowels.c)
+  2    | Practice Problems 2 | [Password](/C/PracticeProblems/pp2/password.c)
+  2    | Lab 2               | [Scrabble](/C/Labs/lab2/scrabble.c)
+  2    | Problem Set 2       | [Readability](/C/ProblemSets/pset2/readability.c)
+  2    | Problem Set 2       | [Bulbs](/C/ProblemSets/pset2/bulbs.c)
+  2    | Problem Set 2       | [Caesar](/C/ProblemSets/pset2/caesar.c)
   | | |
   _ `Algorithms` _
-  3    | Practice Problems 3 | [Recursive atoi](C/pp3/) 
-  3    | Practice Problems 3 | [Average Temperature](C/pp3/) 
-  3    | Practice Problems 3 | [Max](C/pp3/) 
-  3    | Practice Problems 3 | [Snackbar](C/pp3/) 
-  3    | Lab 3               | [Sort](C/lab3/) 
-  3    | Problem Set 3       | [Plurality](C/pset3/) 
-  3    | Problem Set 3       | [Runoff](C/pset3/)
-  3    | Problem Set 3       | [Tideman](C/pset3/)
+  3    | Practice Problems 3 | [Recursive atoi](/C/PracticeProblems/pp3/atoi.c)
+  3    | Practice Problems 3 | [Average Temperature](/C/PracticeProblems/pp3/temps.c)
+  3    | Practice Problems 3 | [Max](/C/PracticeProblems/pp3/max.c)
+  3    | Practice Problems 3 | [Snackbar](/C/PracticeProblems/pp3/snackbar.c)
+  3    | Lab 3               | [Sort](/C/Labs/lab3/answer.txt)
+  3    | Problem Set 3       | [Plurality](/C/ProblemSets/pset3/plurality.c)
+  3    | Problem Set 3       | [Runoff](/C/ProblemSets/pset3/runoff.c)
+  3    | Problem Set 3       | [Tideman](/C/ProblemSets/pset3/tideman.c)
   | | |
   _ `Memory` _
-  4    | Practice Problem 4 | [Bottom Up](C/pp4/) 
-  4    | Practice Problem 4 | [License](C/pp4/) 
-  4    | Lab 4              | [Smiley](C/lab4/smiley/) 
-  4    | Lab 4              | [Volume](C/lab4/volume/) 
-  4    | Problem Set 4      | [Filter-less](C/pset4/filter-less/)
-  4    | Problem Set 4      | [Recover](C/pset4/recover/)
+  4    | Practice Problem 4 | [Bottom Up](/C/PracticeProblems/pp4/bottomup/)
+  4    | Practice Problem 4 | [License](/C/PracticeProblems/pp4/license/)
+  4    | Lab 4              | [Smiley](/C/Labs/lab4/smiley/)
+  4    | Lab 4              | [Volume](/C/Labs/lab4/volume/)
+  4    | Problem Set 4      | [Filter-less](/C/ProblemSets/pset4/filter-less/)
+  4    | Problem Set 4      | [Recover](/C/ProblemSets/pset4/recover/)
   | | |
   _ `Data Structures` _
-  5    | Practice Problem 5 | [Trie](C/pp5/trie/)
-  5    | Lab 5              | [Inheritance](/C/lab5/)
-  5    | Problem Set 5      | [Speller](/C/pset5/)
+  5    | Practice Problem 5 | [Trie](/C/PracticeProblems/pp5/trie/)
+  5    | Lab 5              | [Inheritance](/C/Labs/lab5/inheritance.c)
+  5    | Problem Set 5      | [Speller](/C/ProblemSets/pset5/speller/)
 
 ___
 ___
