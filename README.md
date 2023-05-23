@@ -9,16 +9,16 @@ Harvard CS50x — 2023
 
 ## Table o'Contents
 
-[CourseWork](#pedrozappas-cs50-coursework)
+[CourseWork](#coursework)
 
-[Notes](#course-notes)
+[Notes](#notes)
 
 [Course Resources](#course-resources)
 
 ___
 ___
 
-## ** [ [`CourseWork`](#pedrozappas-cs50-coursework) ] **
+## ** [ [`CourseWork`](#coursework) ] **
 
 <!-- https://github.com/gepser/markdown-progress -->
   Module | Type          | Title
@@ -66,11 +66,12 @@ ___
   _ `Data Structures` _
   5    | Practice Problem 5 | [Trie](C/pp5/trie/)
   5    | Lab 5              | [Inheritance](/C/lab5/)
+  5    | Problem Set 5      | [Speller](/C/pset5/)
 
 ___
 ___
 
-  ## ** [ [Notes](#course-notes) ] ** 
+  ## ** [ [`Notes`](#notes) ] ** 
 
   Module     | Topic           | Notes
   :--------: | :------:        | :---:
@@ -102,7 +103,7 @@ ___
 ___
 
 
-## [Course Resources](#course-resources)
+## [`Course Resources`](#course-resources)
 
 Presented by EdX - https://www.edx.org/course/introduction-computer-science-harvardx-cs50x
 
