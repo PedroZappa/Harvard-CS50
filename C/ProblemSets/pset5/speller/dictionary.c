@@ -23,7 +23,7 @@ const unsigned int N = 26;
 node *table[N];
 
 // Variable
-unsigned int hash_value;
+unsigned int hash_val;
 unsigned int word_count = 0;
 
 // Returns true if word is in dictionary, else false
@@ -32,8 +32,8 @@ bool check(const char *word)
 {
     // TODO
     // Take input & output a number of a bucket in hashtable
-    hash_value = hash(word);
-    node* cursor = table[hash_value];
+    hash_val = hash(word);
+    node* cursor = table[hash_val];
 
     // Traverse list
     while (cursor != 0)
@@ -71,25 +71,27 @@ bool load(const char *dictionary)
         return false;
     }
 
-    // Load Dictionary into hashtable
+    // Loading Dictionary into hashtable
+    // word buffer
     char word[LENGTH + 1];
+    // while words left to read on file
     while (fscanf(file, "%s", word) != EOF)
     {
         // malloc new node for each new word
-        node* new_node = malloc(sizeof(node));
-        if (new_node == NULL)
+        node* nn = malloc(sizeof(node));
+        if (nn == NULL)
         {
             unload();
             return false;
         }
 
-        // Set word into node
-        strcpy(new_node->word, word);
+        // Copy and set word into node
+        strcpy(nn->word, word);
         // Get hash value for word
-        hash_value = hash(word);
-        //
-        new_node->next = table[hash_value];
-        table[hash_value] = new_node;
+        hash_val = hash(word);
+        // Set nn->next to the table's hash_val
+        nn->next = table[hash_val];
+        table[hash_val] = nn;
         word_count++;
     }
     fclose(file);

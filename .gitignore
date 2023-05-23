@@ -6,3 +6,6 @@ C/lab4/smiley/colorize
 C/pset4/filter-less/filter
 C/pp5/trie/trie
 C/pset5/speller/speller
+.vscode/launch.json
+.vscode/tasks.json
+C/ProblemSets/pset5/speller/speller
