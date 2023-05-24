@@ -31,6 +31,7 @@ unsigned int word_count = 0;
 bool check(const char *word)
 {
     // TODO
+
     // Take input & output a number of a bucket in hashtable
     hash_val = hash(word);
     node* cursor = table[hash_val];
@@ -38,10 +39,12 @@ bool check(const char *word)
     // Traverse list
     while (cursor != 0)
     {
+        // Compare strings case insensitively
         if (strcasecmp(word, cursor->word) == 0)
         {
             return true;
         }
+        // Point cursor to next node
         cursor = cursor->next;
     }
 
