@@ -25,8 +25,7 @@ ___
   :---:| ------------: | :---------
   _ `Scratch` _
   0    | Problem Set 0     | [Scratch](/C/ProblemSets/pset0/KeyboardPiano_CS50.sb3)
-  | | |
-  _ `C` _
+  |   _ `C` _ | |
   1    | Practice Problems 1 | [Debug](/C/PracticeProblems/pp1/debug.c)
   1    | Practice Problems 1 | [Half](/C/PracticeProblems/pp1/half.c)
   1    | Practice Problems 1 | [Prime](/C/PracticeProblems/pp1/prime.c)
@@ -35,8 +34,7 @@ ___
   1    | Problem Set 1       | [Mario-less](/C/ProblemSets/pset1/mario.c)
   1    | Problem Set 1       | [Cash](/C/ProblemSets/pset1/cash.c)
   1    | Problem Set 1       | [Credit](/C/ProblemSets/pset1/credit.c)
-  | | |
-  _ `Arrays` _ 
+  _ `Arrays` _  | |
   2    | Practice Problems 2 | [Hours](/C/PracticeProblems/pp2/hours.c)
   2    | Practice Problems 2 | [N0 V0w3ls](/C/PracticeProblems/pp2/no-vowels.c)
   2    | Practice Problems 2 | [Password](/C/PracticeProblems/pp2/password.c)
@@ -44,8 +42,7 @@ ___
   2    | Problem Set 2       | [Readability](/C/ProblemSets/pset2/readability.c)
   2    | Problem Set 2       | [Bulbs](/C/ProblemSets/pset2/bulbs.c)
   2    | Problem Set 2       | [Caesar](/C/ProblemSets/pset2/caesar.c)
-  | | |
-  _ `Algorithms` _
+  _ `Algorithms` _ | |
   3    | Practice Problems 3 | [Recursive atoi](/C/PracticeProblems/pp3/atoi.c)
   3    | Practice Problems 3 | [Average Temperature](/C/PracticeProblems/pp3/temps.c)
   3    | Practice Problems 3 | [Max](/C/PracticeProblems/pp3/max.c)
@@ -54,16 +51,14 @@ ___
   3    | Problem Set 3       | [Plurality](/C/ProblemSets/pset3/plurality.c)
   3    | Problem Set 3       | [Runoff](/C/ProblemSets/pset3/runoff.c)
   3    | Problem Set 3       | [Tideman](/C/ProblemSets/pset3/tideman.c)
-  | | |
-  _ `Memory` _
+   _ `Memory` _ | |
   4    | Practice Problem 4 | [Bottom Up](/C/PracticeProblems/pp4/bottomup/)
   4    | Practice Problem 4 | [License](/C/PracticeProblems/pp4/license/)
   4    | Lab 4              | [Smiley](/C/Labs/lab4/smiley/)
   4    | Lab 4              | [Volume](/C/Labs/lab4/volume/)
   4    | Problem Set 4      | [Filter-less](/C/ProblemSets/pset4/filter-less/)
   4    | Problem Set 4      | [Recover](/C/ProblemSets/pset4/recover/)
-  | | |
-  _ `Data Structures` _
+  _ `Data Structures` _ | |
   5    | Practice Problem 5 | [Trie](/C/PracticeProblems/pp5/trie/)
   5    | Lab 5              | [Inheritance](/C/Labs/lab5/inheritance.c)
   5    | Problem Set 5      | [Speller](/C/ProblemSets/pset5/speller/)
@@ -75,29 +70,30 @@ ___
 
   Module     | Topic           | Notes
   :--------: | :------:        | :---:
-  0          | _ `Scratch` _         | [Lecture 0](/Notes/Lectures/Lecture_0.md)
-| | |
-  1          |                 | [Lecture 1](/Notes/Lectures/Lecture_1.md)
-|  1         |      _ `C` _          | [Section 1](/Notes/Sections/Section_1.md)
+| | _ `Scratch` _         | 
+  0          |       | [Lecture 0](/Notes/Lectures/Lecture_0.md)
+| |  _ `C` _  |
+  1          |        | [Lecture 1](/Notes/Lectures/Lecture_1.md)
+|  1         |              | [Section 1](/Notes/Sections/Section_1.md)
 |   1        |                 | [Shorts 1](/Notes/Shorts/Shorts_1.md)
-| | |
-  2          |    _ `Arrays` _    | [Lecture 2](/Notes/Lectures/Lecture_2.md)
+| | _ `Arrays` _   |
+  2          |      | [Lecture 2](/Notes/Lectures/Lecture_2.md)
 |  2         |                | [Section 2](/Notes/Sections/Section_2.md)
 |  2         |                 | [Shorts 2](/Notes/Shorts/Shorts_2.md)
-| | |
-  3           |  _ `Algorithms` _    | [Lecture 3](/Notes/Lectures/Lecture_3.md)
+| | _ `Algorithms` _  |
+  3           |     | [Lecture 3](/Notes/Lectures/Lecture_3.md)
 | 3           |                | [Section 3](/Notes/Sections/Section_3.md)
 | 3           |                 | [Shorts 3](/Notes/Shorts/Shorts_3.md)
-| | |
-  4           |     _ `Memory` _   | [Lecture 4](/Notes/Lectures/Lecture_4.md)
+| |  _ `Memory` _  |
+  4           |      | [Lecture 4](/Notes/Lectures/Lecture_4.md)
 |  4          |                 | [Section 4](/Notes/Sections/Section_4.md)
 | 4           |                 | [Shorts 4](/Notes/Shorts/Shorts_4.md)
-| | |
-  5           |  _ `Data Structures` _   | [Lecture 5](/Notes/Lectures/Lecture_5.md)
+| | _ `Data Structures` _  |
+  5           |          | [Lecture 5](/Notes/Lectures/Lecture_5.md)
 |   5         |                 | [Section 5](/Notes/Sections/Section_5.md)
 |  5          |                 | [Shorts 5](/Notes/Shorts/Shorts_5.md)
-| | |
-  6           | _ `Python` _    | [Lecture 6](/Notes/Lectures/Lecture_6.md)
+| | _ `Python` _  |
+  6           |              | [Lecture 6](/Notes/Lectures/Lecture_6.md)
 
 
 ___
