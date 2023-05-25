@@ -64,6 +64,7 @@ ___
   5    | Problem Set 5      | [Speller](/Code/ProblemSets/pset5/speller/)
   _ `Python` _ | |
   6   | Practice Problem 6 | [Bank](/Code/PracticeProblems/pp6/bank/)
+  6   | Practice Problem 6 | [Figlet](/Code/PracticeProblems/pp6/figlet/)
 
 ___
 ___
