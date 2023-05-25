@@ -75,28 +75,29 @@ ___
 
   Module     | Topic           | Notes
   :--------: | :------:        | :---:
-  0          | `Scratch`         | [Lecture 0](/Notes/Lectures/Lecture_0.md)
+  0          | _ `Scratch` _         | [Lecture 0](/Notes/Lectures/Lecture_0.md)
 | | |
   1          |                 | [Lecture 1](/Notes/Lectures/Lecture_1.md)
-|  1         |      `C`          | [Section 1](/Notes/Sections/Section_1.md)
+|  1         |      _ `C` _          | [Section 1](/Notes/Sections/Section_1.md)
 |   1        |                 | [Shorts 1](/Notes/Shorts/Shorts_1.md)
 | | |
-  2          |    `Arrays`     | [Lecture 2](/Notes/Lectures/Lecture_2.md)
+  2          |    _ `Arrays` _    | [Lecture 2](/Notes/Lectures/Lecture_2.md)
 |  2         |                | [Section 2](/Notes/Sections/Section_2.md)
 |  2         |                 | [Shorts 2](/Notes/Shorts/Shorts_2.md)
 | | |
-  3           |  `Algorithms`    | [Lecture 3](/Notes/Lectures/Lecture_3.md)
+  3           |  _ `Algorithms` _    | [Lecture 3](/Notes/Lectures/Lecture_3.md)
 | 3           |                | [Section 3](/Notes/Sections/Section_3.md)
 | 3           |                 | [Shorts 3](/Notes/Shorts/Shorts_3.md)
 | | |
-  4           |     `Memory`   | [Lecture 4](/Notes/Lectures/Lecture_4.md)
+  4           |     _ `Memory` _   | [Lecture 4](/Notes/Lectures/Lecture_4.md)
 |  4          |                 | [Section 4](/Notes/Sections/Section_4.md)
 | 4           |                 | [Shorts 4](/Notes/Shorts/Shorts_4.md)
 | | |
-  5           | `Data Structures`    | [Lecture 5](/Notes/Lectures/Lecture_5.md)
+  5           |  _ `Data Structures` _   | [Lecture 5](/Notes/Lectures/Lecture_5.md)
 |   5         |                 | [Section 5](/Notes/Sections/Section_5.md)
 |  5          |                 | [Shorts 5](/Notes/Shorts/Shorts_5.md)
 | | |
+  6           | _ `Python` _    | [Lecture 6](/Notes/Lectures/Lecture_6.md)
 
 
 ___
@@ -130,3 +131,7 @@ PDF 2 Markdown - https://converter.app/pdf-to-md/
 Pixel Art - https://cs50.ly/art
 
 </center>
+
+
+___
+___

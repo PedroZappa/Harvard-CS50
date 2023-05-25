@@ -1,4 +1,9 @@
-# CS50 Week-1: Shorts
+CS50 Week-1: Shorts
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================
 
 ## C Language Data Types and Variables
 
@@ -638,3 +643,9 @@ card deal_cards(deck name)
     }
 }
 ```
+
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================

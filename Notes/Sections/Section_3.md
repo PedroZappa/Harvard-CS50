@@ -1,4 +1,9 @@
-# CS50: Section_2
+CS50: Section_2
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================
 
 [https://cs50.harvard.edu/x/2023/sections/3/]
 
@@ -188,3 +193,9 @@ int factorial(int number)
 ```
 
 Draw things out in pseudocode before trying to write actual code!
+
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================

@@ -1,6 +1,10 @@
 [Lecture 1](#lecture-1)
 =======================
 
+#### Return to [`CS50x`](/README.md)
+
+=======================
+
 *   [Welcome!](#welcome)
 *   [Hello World](#hello-world)
 *   [Functions](#functions)
@@ -615,3 +619,9 @@ In this lesson, you learned how to apply the building blocks you learned in Scra
 *   How to utilize types and operators.
 
 See you next time!
+
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================

@@ -1,4 +1,9 @@
-# CS50: Section_2
+CS50: Section_2
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================
 
 [https://cs50.harvard.edu/x/2023/sections/2/]
 
@@ -261,3 +266,9 @@ int main(int argc, string argv[])
     printf("Initials: %c.%c.\n", argv[1][0], argv[2][0]);
 }
 ```
+
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================

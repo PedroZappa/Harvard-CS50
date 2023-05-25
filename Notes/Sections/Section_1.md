@@ -1,4 +1,9 @@
-# CS50: Section_1
+CS50: Section_1
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================
 
 [https://cs50.harvard.edu/x/2023/sections/1/]
 
@@ -54,3 +59,9 @@ ___
 - Prompt the user for a `dgoal number` of llamas;
 - `Add and subtract llamas every "year"` until we reach the goal number of llamas;
 - `Print the number of years` it took to reach the goal number of llamas;
+
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================

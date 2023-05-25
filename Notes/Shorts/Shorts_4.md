@@ -1,4 +1,9 @@
-# [Shorts 4: Memory](https://cs50.harvard.edu/x/2023/weeks/4/)
+[Shorts 4: Memory](https://cs50.harvard.edu/x/2023/weeks/4/)
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================
 
 Table o'Contents
 
@@ -621,3 +626,9 @@ fseek() | Changes the position of a file pointer. |
 ftell() | Returns the current position (byte) of a file pointer. |
 feof() | Returns true if the end of file has been reached. |
 ferror() | Returns true if an error occurred. |
+
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================

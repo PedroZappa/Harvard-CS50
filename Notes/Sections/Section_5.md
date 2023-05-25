@@ -1,5 +1,9 @@
+Section_5: Data Structures
+=======================
 
-# Section_5: Data Structures
+#### Return to [`CS50x`](/README.md)
+
+=======================
 
 ## Table o'Contents
 
@@ -396,4 +400,9 @@ int hash(string phrase)
 
 ___
 ___
-___
+
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================

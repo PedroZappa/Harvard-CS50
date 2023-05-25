@@ -1,5 +1,7 @@
 [Lecture 5](#lecture-5)
 =======================
+#### Return to [`CS50x`](/README.md)
+=======================
 <center>
 
 ## Table o'Contents
@@ -861,3 +863,7 @@ In this lesson, you learned about using pointers to build new data structures. S
 * [Tries](#tries)
 
 See you next time!
+
+=======================
+#### Return to [`CS50x`](/README.md)
+=======================

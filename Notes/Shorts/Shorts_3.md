@@ -1,4 +1,9 @@
-# CS50: Shorts 3
+CS50: Shorts 3
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================
 
 ## Table of Contents
 
@@ -306,3 +311,7 @@ The array is already perfectly sorted. But we still have to split and recombine 
 
 ---
 ---
+
+#### Return to [`CS50x`](/README.md)
+
+=======================

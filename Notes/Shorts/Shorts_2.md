@@ -1,4 +1,9 @@
-# CS50 Week-2: Shorts
+CS50 Week-2: Shorts
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================
 
 ## Functions
 
@@ -684,3 +689,9 @@ argv[0] | "./greedy" |
 argv[1] | "1024" |
 argv[2] | "cs50" |
 argv[3] | ??? |
+
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================

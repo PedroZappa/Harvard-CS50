@@ -1,5 +1,7 @@
 [Lecture 3](#lecture-3)
 =======================
+#### Return to [`CS50x`](/README.md)
+=======================
 
 *   [Welcome!](#welcome)
 *   [Algorithms](#algorithms)
@@ -589,3 +591,7 @@ In this lesson, you learned about algorithmic thinking and building your own dat
 *   Recursion.
 
 See you next time!
+
+=======================
+#### Return to [`CS50x`](/README.md)
+=======================

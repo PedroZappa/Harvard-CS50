@@ -1,5 +1,7 @@
 [Lecture 4](#lecture-4)
 =======================
+#### Return to [`CS50x`](/README.md)
+=======================
 
 *   [Welcome!](#welcome)
 *   [Memory](#memory)
@@ -862,3 +864,7 @@ In this lesson, you learned about pointers that provide you with the ability to 
 *   `scanf`
 
 See you next time!
+
+=======================
+#### Return to [`CS50x`](/README.md)
+=======================

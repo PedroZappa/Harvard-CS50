@@ -1,6 +1,12 @@
 <center>
 
-# [Shorts 5: Data Structures](https://cs50.harvard.edu/x/2023/weeks/5/)
+[Shorts 5: Data Structures](https://cs50.harvard.edu/x/2023/weeks/5/)
+=======================
+
+#### ( Return to [`CS50x`](/README.md) )
+
+
+
 
 ## Table o'Contents
 
@@ -1068,3 +1074,9 @@ To `pop`, traverse the `linked list` to its second element (if it exists), free 
 ![Short5_83](/IMG/Shorts5/Short5_83.png)
 ![Short5_84](/IMG/Shorts5/Short5_84.png)
 ![Short5_85](/IMG/Shorts5/Short5_85.png)
+
+=======================
+
+#### Return to [`CS50x`](/README.md)
+
+=======================
