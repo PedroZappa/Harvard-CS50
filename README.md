@@ -22,7 +22,7 @@ ___
 
 <!-- https://github.com/gepser/markdown-progress -->
   Module | Type          | Title
-  :---:| ------------: | :---------
+  :---:| ------------: | :---------:
   _ `Scratch` _
   0    | Problem Set 0     | [Scratch](/Code/ProblemSets/pset0/KeyboardPiano_CS50.sb3)
   |   _ `C` _ | |
@@ -66,6 +66,7 @@ ___
   6   | Practice Problem 6 | [Bank](/Code/PracticeProblems/pp6/bank/)
   6   | Practice Problem 6 | [Figlet](/Code/PracticeProblems/pp6/figlet/)
   6   | Practice Problem 6 | [Jar](/Code/PracticeProblems/pp6/jar/)
+  6   | Practice Problem 6 | [Seven Day Average](/Code/PracticeProblems/pp6/seven-day-average/)
 
 ___
 ___
