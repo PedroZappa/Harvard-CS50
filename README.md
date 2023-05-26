@@ -65,6 +65,7 @@ ___
   _ `Python` _ | |
   6   | Practice Problem 6 | [Bank](/Code/PracticeProblems/pp6/bank/)
   6   | Practice Problem 6 | [Figlet](/Code/PracticeProblems/pp6/figlet/)
+  6   | Practice Problem 6 | [Jar](/Code/PracticeProblems/pp6/jar/)
 
 ___
 ___
