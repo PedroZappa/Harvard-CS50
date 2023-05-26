@@ -28,9 +28,6 @@ def main():
             states.append(state)
         if len(state) == 0:
             break
-        
-    # Prompt user for timespan
-    
 
     print(f"\n{timespan}-Day Averages")
 

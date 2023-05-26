@@ -11,7 +11,7 @@ def main():
 class Jar:
     def __init__(self, capacity=12):
         # if capacity != non-negative integer: raise ValueError()
-        if capacity < 0 and capacity == int():
+        if capacity < 0:
             raise ValueError("Capacity has to be a positive integer.")
         # Initialize a jar with a given capacity
         self._capacity = capacity
