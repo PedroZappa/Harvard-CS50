@@ -101,6 +101,7 @@ ___
 | | _ `Python` _  |
   6           |              | [Lecture 6](/Notes/Lectures/Lecture_6.md)
   6           |              | [Section 6](/Notes/Sections/Section_6.md)
+  6           |              | [Shorts 6](/Notes/Shorts/Shorts_6.md)
 
 
 ___
