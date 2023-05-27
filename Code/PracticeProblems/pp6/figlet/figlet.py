@@ -66,7 +66,7 @@ def print_help():
     print("Zedro's Figlet Writer Usage Guide: ||")
     print("                                   ||")
     print("Prints the list of valid fonts     ||")
-    print("./figlet.py -dict                  ||")
+    print("./figlet.py --dict                 ||")
     print("            -d                     ||")
     print("                                   ||")
     print("Set user defined font              ||")

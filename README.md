@@ -69,6 +69,7 @@ ___
   6   | Practice Problem 6 | [Seven Day Average](/Code/PracticeProblems/pp6/seven-day-average/)
   6   | Practice Problem 6 | [Taqueria](/Code/PracticeProblems/pp6/taqueria/)
   6   | Problem Set 6 | [Sentimental Hello](/Code/ProblemSets/pset6/sentimental-hello/)
+  6   | Problem Set 6 | [Sentimental Mario-less](/Code/ProblemSets/pset6/sentimental-mario-less/)
 
 ___
 ___
