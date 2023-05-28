@@ -68,12 +68,14 @@ ___
   6   | Practice Problem 6 | [Jar](/Code/PracticeProblems/pp6/jar/)
   6   | Practice Problem 6 | [Seven Day Average](/Code/PracticeProblems/pp6/seven-day-average/)
   6   | Practice Problem 6 | [Taqueria](/Code/PracticeProblems/pp6/taqueria/)
-  6   | Problem Set 6 | [Hello](/Code/ProblemSets/pset6/sentimental-hello/)
+  6   | Lab 6 | [World Cup](/Code/Labs/lab6/world-cup/)
+  6   | Problem Set 6 | [Hello](/Code/Labs/lab6/sentimental-hello/)
   6   | Problem Set 6 | [Mario-less](/Code/ProblemSets/pset6/sentimental-mario-less/)
   6   | Problem Set 6 | [Mario-more](/Code/ProblemSets/pset6/sentimental-mario-more/)
   6   | Problem Set 6 | [Cash](/Code/ProblemSets/pset6/sentimental-cash/)
   6   | Problem Set 6 | [Readability](/Code/ProblemSets/pset6/sentimental-readability/)
-
+  6   | Problem Set 6 | [DNA](/Code/ProblemSets/pset6/dna/)
+  _ `SQL` _ | |
 ___
 ___
 
@@ -107,6 +109,7 @@ ___
   6           |              | [Lecture 6](/Notes/Lectures/Lecture_6.md)
   6           |              | [Section 6](/Notes/Sections/Section_6.md)
   6           |              | [Shorts 6](/Notes/Shorts/Shorts_6.md)
+  | | _ `SQL` _  |
 
 
 ___
