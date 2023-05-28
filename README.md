@@ -68,9 +68,11 @@ ___
   6   | Practice Problem 6 | [Jar](/Code/PracticeProblems/pp6/jar/)
   6   | Practice Problem 6 | [Seven Day Average](/Code/PracticeProblems/pp6/seven-day-average/)
   6   | Practice Problem 6 | [Taqueria](/Code/PracticeProblems/pp6/taqueria/)
-  6   | Problem Set 6 | [Sentimental Hello](/Code/ProblemSets/pset6/sentimental-hello/)
-  6   | Problem Set 6 | [Sentimental Mario-less](/Code/ProblemSets/pset6/sentimental-mario-less/)
-  6   | Problem Set 6 | [Sentimental Mario-more](/Code/ProblemSets/pset6/sentimental-mario-more/)
+  6   | Problem Set 6 | [Hello](/Code/ProblemSets/pset6/sentimental-hello/)
+  6   | Problem Set 6 | [Mario-less](/Code/ProblemSets/pset6/sentimental-mario-less/)
+  6   | Problem Set 6 | [Mario-more](/Code/ProblemSets/pset6/sentimental-mario-more/)
+  6   | Problem Set 6 | [Cash](/Code/ProblemSets/pset6/sentimental-cash/)
+  6   | Problem Set 6 | [Readability](/Code/ProblemSets/pset6/sentimental-readability/)
 
 ___
 ___
