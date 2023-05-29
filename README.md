@@ -18,7 +18,7 @@ Harvard CS50x — 2023
 ___
 ___
 
-## ** [ [`CourseWork`](#coursework) ] **
+# ** [ [`CourseWork`](#coursework) ] **
 
 <!-- https://github.com/gepser/markdown-progress -->
   Module | Type          | Title
@@ -87,8 +87,8 @@ ___
   0          |       | [Lecture 0](/Notes/Lectures/Lecture_0.md)
 | |  _ `C` _  |
   1          |        | [Lecture 1](/Notes/Lectures/Lecture_1.md)
-|  1         |              | [Section 1](/Notes/Sections/Section_1.md)
-|   1        |                 | [Shorts 1](/Notes/Shorts/Shorts_1.md)
+  1         |              | [Section 1](/Notes/Sections/Section_1.md)
+  1        |                 | [Shorts 1](/Notes/Shorts/Shorts_1.md)
 | | _ `Arrays` _   |
   2          |      | [Lecture 2](/Notes/Lectures/Lecture_2.md)
 |  2         |                | [Section 2](/Notes/Sections/Section_2.md)
@@ -110,13 +110,15 @@ ___
   6           |              | [Section 6](/Notes/Sections/Section_6.md)
   6           |              | [Shorts 6](/Notes/Shorts/Shorts_6.md)
   | | _ `SQL` _  |
+  7           |              | [Lecture 7](/Notes/Lectures/Lecture_7.md)
+
 
 
 ___
 ___
 
 
-## [`Course Resources`](#course-resources)
+# [`Course Resources`](#course-resources)
 
 Presented by EdX - https://www.edx.org/course/introduction-computer-science-harvardx-cs50x
 

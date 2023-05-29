@@ -1,4 +1,4 @@
-[Lecture 1](#lecture-1)
+[Lecture 1](#lecture-1): _`C`_
 =======================
 
 #### Return to [`CS50x`](/README.md)

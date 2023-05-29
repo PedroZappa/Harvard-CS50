@@ -1,4 +1,4 @@
-[Lecture 5](#lecture-5)
+[Lecture 5](#lecture-5): _`Data Structures`_
 =======================
 #### Return to [`CS50x`](/README.md)
 =======================

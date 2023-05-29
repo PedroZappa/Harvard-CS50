@@ -1,4 +1,4 @@
-[Lecture 2](#lecture-2)
+[Lecture 2](#lecture-2): _`Arrays`_
 =======================
 
 #### Return to [`CS50x`](/README.md)

@@ -1,4 +1,4 @@
-[Lecture 4](#lecture-4)
+[Lecture 4](#lecture-4): _`Memory`_
 =======================
 #### Return to [`CS50x`](/README.md)
 =======================

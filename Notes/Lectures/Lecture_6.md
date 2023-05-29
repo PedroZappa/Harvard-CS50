@@ -1,5 +1,5 @@
-[Lecture 6](#lecture-6): _`Python`_
-=======================
+# [Lecture 6](#lecture-6): _`Python`_
+
 #### Return to [`CS50x`](/README.md)
 =======================
 

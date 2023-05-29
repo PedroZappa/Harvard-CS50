@@ -1,13 +1,30 @@
-CS50 Week-1: Shorts
-=======================
+# Shorts 1: _`C`_
 
 #### Return to [`CS50x`](/README.md)
 
-=======================
+___
 
-## C Language Data Types and Variables
+## Table o'Contents
 
-### int
+- [C Language Data Types and Variables](#c-language-data-types-and-variables)
+- [CS50 Additional Types](#cs50-additional-types)
+- [Creating a Variable](#creating-a-variable)
+- [Using a Variable](#using-a-variable)
+- [Arithmetic Operators](#arithmetic-operators)
+- [Boolean Expressions](#boolean-expressions)
+- [Logical Operators](#logical-operators)
+- [Relational Operators](#relational-operators)
+- [Conditionals](#conditionals)
+- [Ternary Op Conditional](#ternary-op-conditional)
+- [Loops](#loops)
+- [Using the Linux Command Line](#using-the-linux-command-line)
+- [Magic Numbers](#magic-numbers)
+
+___
+
+## [C Language Data Types and Variables](#c-language-data-types-and-variables)
+
+### `int`
 
 - The `int` data_type is used for variables that will store integers;
 
@@ -15,7 +32,7 @@ CS50 Week-1: Shorts
 
 - Integer Range `[-2^31 - 0 - 2^31-1]`
 
-### unsigned int
+### `unsigned int`
 
 - `unsigned` is a qualifier that can be applied to certain types (including `int`), which effectively doubles the positive range of variables of that type, at the cost of disallowing any negative values;
 
@@ -23,7 +40,7 @@ CS50 Week-1: Shorts
 
 - Unsigned Integer Range `[0 - 2^31 - 2^32-1]`
 
-### char
+### `char`
 
 - The `char` data_type is used for variables that will store single characters;
 
@@ -33,7 +50,7 @@ CS50 Week-1: Shorts
 
 - Character Range `[-128 - 0 - 127]`
 
-### float
+### `float`
 
 - The `float` data_type is used for variables that will store floating point values, also known as Real Numbers;
 
@@ -41,7 +58,7 @@ CS50 Week-1: Shorts
 
 - It's a little complicated to describer the range of a `float` but suffice it to say with 32 bits of precision, some of which might be used for an integer part, we are limited in how precise we can be;
 
-### double
+### `double`
 
 - The `double` data_type is used for variables that will store floating-point values, also known as Real Numbers;
 
@@ -49,9 +66,9 @@ CS50 Week-1: Shorts
 
 - With an additional 32 bits of precision relative to a `float`, `doubles` allow us to specify much more precise real numbers;
 
-### void
+### `void`
 
-- Is a type, but no a data_type;
+- Is a `type`, but not a data_type;
 
 - Functions can have a `void` return type, which just means they don't return a value;
 
@@ -59,9 +76,9 @@ CS50 Week-1: Shorts
 
 - For now, think of `void` more as a placeholder for "nothing". It's more complex than that, but this should suffice for the better part of the course;
 
-=====================================================================
+___
 
-## CS50 Additional Types
+## [CS50 Additional Types](#cs50-additional-types)
 
 ### bool
 
@@ -77,7 +94,7 @@ CS50 Week-1: Shorts
 
 - Be sure to #include <cs50.h> atop your program if you wish to use the `string` type;
 
-## Creating a Variable
+## [Creating a Variable](#creating-a-variable)
 
 - To bring a variable into existence, you need simply specify the data type of the variable and give it a name;
 
@@ -95,7 +112,7 @@ float sqrt2, sqrt3, pi;
 
 - In general, it's a good practice to only declare variables when you need them;
 
-## Using a Variable
+## [Using a Variable](#using-a-variable)
 
 - After a variable has been declared, it's no longer necessary to specify that variable's type. (In fact, doing so has some unintended consequences!):
 
@@ -113,9 +130,9 @@ int number = 17;  // Initialization
 char letter= 'H'; // Initialization
 ```
 
-=====================================================================
+___
 
-## Arithmetic Operators
+## [Arithmetic Operators](#arithmetic-operators)
 
 - In order to manipulate and work with variable and value in C, we have a number of `operators` at our disposal;
 
@@ -146,7 +163,7 @@ x++;
 x--;
 ```
 
-## Boolean Expressions
+## [Boolean Expressions](#boolean-expressions)
 
 - Boolean expressions are used in C for comparing two values;
 
@@ -160,7 +177,7 @@ x--;
 
 - Two main types of Boolean expressions: logical operators and relational operators.
 
-### Logical Operators
+### [Logical Operators](#logical-operators)
 
 - Logical AND ( `&&` ) is true if and only if both operands are
 true, otherwise false:
@@ -188,7 +205,7 @@ true, otherwise false:
 | True  |      False     |
 | False  |      True     |
 
-### Relational Operators
+### [Relational Operators](#relational-operators)
 
 - These behave as you would expect them to, and appear syntactically similar to how you may recall them from elementary arithmetic;
 
@@ -206,9 +223,9 @@ true, otherwise false:
 assignment operator ( `=` ) when you intend to use the
 equality operator ( `==` ).
 
-=====================================================================
+___
 
-## Conditionals
+## [Conditionals](#conditionals)
 
 - Conditional expressions allow your program to make decisions and take different forks in the road, depending on the values of variables or user input;
 
@@ -315,7 +332,7 @@ switch(x) {
 
 - No `breaks;` Execution will fall through each case without breaking;
 
-## Ternary Op Conditional
+## [Ternary Op Conditional](#ternary-op-conditional)
 
 - These two snippets of code act identically;
 
@@ -351,9 +368,9 @@ int x = (expr) ? 5 : 6;
 
 - Use to replace a very simple `if-else` to make your code look fancy;
 
-=====================================================================
+___
 
-## Loops
+## [Loops](#loops)
 
 - Loops allow your programs to execute lines of code repeatedly, saving you from needing to copy and paste or otherwise repeat lines of code;
 
@@ -451,9 +468,9 @@ body of a loop a specified number of times, in this example 10.
 
 - Use when you want a loop to repeat a discrete number of times, though you may not know the number at the moment the program is compiled.
 
-=====================================================================
+___
 
-## Using the Linux Command Line
+## [Using the Linux Command Line](#using-the-linux-command-line)
 
 - The CS50 IDE is a cloud-based machine running Ubuntu, one of the many flavors of the Linux OS;
 
@@ -536,7 +553,7 @@ rm –r <directory>
   - diff
   - telnet
 
-## Magic Numbers
+## [Magic Numbers](#magic-numbers)
 
 - Some of the programs we’ve written in CS50 have some weird numbers thrown in there.
   - The height of Mario’s pyramid is capped at 23, for example.
@@ -644,8 +661,8 @@ card deal_cards(deck name)
 }
 ```
 
-=======================
+___
 
 #### Return to [`CS50x`](/README.md)
 
-=======================
+___
