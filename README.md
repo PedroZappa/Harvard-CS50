@@ -111,6 +111,7 @@ ___
   6           |              | [Shorts 6](/Notes/Shorts/Shorts_6.md)
   | | _ `SQL` _  |
   7           |              | [Lecture 7](/Notes/Lectures/Lecture_7.md)
+  7           |              | [Section 7](/Notes/Sections/Section_7.md)
 
 
 
