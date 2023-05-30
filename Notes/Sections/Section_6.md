@@ -1,4 +1,4 @@
-Section_6: Python
+Section_6: _`Python`_
 =======================
 
 #### Return to [`CS50x`](/README.md)
@@ -7,17 +7,17 @@ Section_6: Python
 
 ## Table o'Contents
 
-[Strings](#strings)
+- [Strings](#strings)
 
-[Dot notation](#dot-notation)
+- [Dot notation](#dot-notation)
 
-[Loops](#loops)
+- [Loops](#loops)
 
-[Dictionaries](#dictionaries)
+- [Dictionaries](#dictionaries)
 
-[Libraries](#libraries)
+- [Libraries](#libraries)
 
-[File Reading, Writing](#file-reading-and-writing)
+- [File Reading, Writing](#file-reading-and-writing)
 
 ___
 ___
