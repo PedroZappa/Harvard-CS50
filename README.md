@@ -2,11 +2,10 @@
 <p align="center">
 <img src="IMG/harvard.png" alt="logo" height="150"/>
 </p>
-<h1 align="center">
-Harvard CS50x — 2023
-</h1>
+
 <center>
 
+# Harvard CS50x — 2023
 ## Table o'Contents
 
 [CourseWork](#coursework)
@@ -20,7 +19,6 @@ ___
 
 # ** [ [`CourseWork`](#coursework) ] **
 
-<!-- https://github.com/gepser/markdown-progress -->
   Module | Type          | Title
   :---:| ------------: | :---------:
   _ `Scratch` _
@@ -76,10 +74,12 @@ ___
   6   | Problem Set 6 | [Readability](/Code/ProblemSets/pset6/sentimental-readability/)
   6   | Problem Set 6 | [DNA](/Code/ProblemSets/pset6/dna/)
   _ `SQL` _ | |
+  7   | Lab 7 | [Songs](/Code/Labs/lab7/songs/)
+
 ___
 ___
 
-  ## ** [ [`Notes`](#notes) ] ** 
+# ** [ [`Notes`](#notes) ] ** 
 
   Module     | Topic           | Notes
   :--------: | :------:        | :---:
