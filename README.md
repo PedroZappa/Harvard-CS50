@@ -85,10 +85,10 @@ ___
   :--------: | :------:        | :---:
 | | _ `Scratch` _         | 
   0          |       | [Lecture 0](/Notes/Lectures/Lecture_0.md)
-| |  _ `C` _  |
+| |  _ `C` _ |
   1          |        | [Lecture 1](/Notes/Lectures/Lecture_1.md)
-  1         |              | [Section 1](/Notes/Sections/Section_1.md)
-  1        |                 | [Shorts 1](/Notes/Shorts/Shorts_1.md)
+  1          |              | [Section 1](/Notes/Sections/Section_1.md)
+  1          |                 | [Shorts 1](/Notes/Shorts/Shorts_1.md)
 | | _ `Arrays` _   |
   2          |      | [Lecture 2](/Notes/Lectures/Lecture_2.md)
 |  2         |                | [Section 2](/Notes/Sections/Section_2.md)
@@ -112,6 +112,7 @@ ___
   | | _ `SQL` _  |
   7           |              | [Lecture 7](/Notes/Lectures/Lecture_7.md)
   7           |              | [Section 7](/Notes/Sections/Section_7.md)
+  7           |              | [Shorts 7](/Notes/Shorts/Shorts_7.md)
 
 
 
