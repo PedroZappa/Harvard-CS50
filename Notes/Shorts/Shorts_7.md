@@ -139,8 +139,7 @@ VALUES (‘kramer’, ‘Babs Kramer’)
 Extract information from a table
 
 ```SQL
-SELECT <columns>
-FROM <table>
+SELECT <columns> FROM <table>
 WHERE <condition>
 ORDER BY <column>
 ```
@@ -149,6 +148,7 @@ ORDER BY <column>
 SELECT idnum, fullname
 FROM users
 ```
+
 ![Select Data](/IMG/Shorts7/11.png)
 
 ```SQL
