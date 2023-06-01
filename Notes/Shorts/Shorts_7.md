@@ -8,7 +8,7 @@ ___
 
 - [Databases](#databases)
 - [SQL](#sql)
-- [db Data Types](#data-types)
+- [Data Types](#data-types)
 - [Primary Key](#primary-key)
 - [_`CRUD`_](#crud)
     - [INSERT](#insert)
@@ -16,7 +16,7 @@ ___
     - [SELECT (JOIN)](#select-join)
     - [UPDATE](#update)
     - [DELETE](#delete)
-
+- [MyPHPAdmin](#myphpadmin)
 ___
 
 ## [_`Databases`_](#table-ocontents)
@@ -49,21 +49,41 @@ ___
 Each column of your `SQL` table is capable of holding data of a particular data type.
 
 ![](/IMG/Shorts7/0.png)
+Stores `Integers`;
+
 ![](/IMG/Shorts7/1.png)
+Hold `Integers` with different upper bounds;
+
 ![](/IMG/Shorts7/2.png)
+Stand for `double` and `float`;
+
 ![](/IMG/Shorts7/3.png)
+Store `date` and `time`;
+
 ![](/IMG/Shorts7/4.png)
+Store `geometry` and `line strings`, can be used to store mapping of an area in a map;
+
 ![](/IMG/Shorts7/5.png)
+
+Stands for strings;
+
 ![](/IMG/Shorts7/6.png)
+
+`Column of a table` used to store a `limited set` of values;
+
 ![](/IMG/Shorts7/7.png)
 
-- Unlike in `C`, the `CHAR` data type in `SQL` does not refer to a single character. Rather, it is a fixed-length string.
+- Unlike in `C`, the `CHAR` data type in `SQL` does not refer to a single character. Rather, it is a _`fixed-length string`_.
 
-- In most relational databases, including `MySQL`, you actually specify the fixed-length as part of the type definition, e.g. `CHAR(10)`.
+- In most `relational databases`, including `MySQL`, you actually specify the fixed-length as part of the type definition, e.g. `CHAR(10)`.
 
-- A `VARCHAR` refers to a variable-length string.
+- A `VARCHAR` refers to a _`variable-length string`_.
 
     - `VARCHARs` also require you to specify the maximum possible length of a string that could be stored in that column, e.g. `VARCHAR(99)`.
+
+`SQLite` has these data types as well, but affiliates each with a "`type affinity`" to simplify things
+
+![SQLite data types](/IMG/Shorts7/21.png)
 
 ## [_`Primary Key`_](#table-ocontents)
 
@@ -89,34 +109,27 @@ We will primarily consider just `four operations` that one may perform on a tabl
 
 - Add information to a table.
 
-```SQL
-INSERT INTO
-<table>
-(<columns>)
-VALUES
-(<values>)
+```sql
+-- (<columns>) => comma separated list of columns
+INSERT INTO <table> (<columns>)
+VALUES (<values>)
 ```
 
 ```SQL
-INSERT INTO
-users
-(username, password, fullname)
-VALUES
-(‘newman’, ‘USMAIL’, ‘Newman’)
+--  Insert into users table, into the the username, password and fullname columns, with values of ‘newman’, ‘USMAIL’, ‘Newman’
+INSERT INTO users (username, password, fullname)
+VALUES (‘newman’, ‘USMAIL’, ‘Newman’)
 ```
 
 ![Insert Example](/IMG/Shorts7/9.png)
 
-- When defining the column that ultimately ends up being your table’s primary key, it’s usually a good idea to have that column be an integer.
+- When defining the column that ultimately ends up being your table’s `primary key`, it’s usually a good idea to have that column be an integer.
 
-- Moreover, so as to eliminate the situation where you may accidentally forget to specify a real value for the primary key column, you can configure that column to `autoincrement`, so it will pre-populate that column for you automatically when rows are added to the table.
+- Moreover, so as to eliminate the situation where you may accidentally forget to specify a real value for the `primary key` column, you can configure that column to `autoincrement`, so it will pre-populate that column for you automatically when rows are added to the table.
 
 ```SQL
-INSERT INTO
-moms
-(username, mother)
-VALUES
-(‘kramer’, ‘Babs Kramer’)
+INSERT INTO moms (username, mother)
+VALUES (‘kramer’, ‘Babs Kramer’)
 ```
 
 ![ Inserted Table](/IMG/Shorts7/10.png)
@@ -126,43 +139,30 @@ VALUES
 Extract information from a table
 
 ```SQL
-SELECT
-<columns>
-FROM
-<table>
-WHERE
-<condition>
-ORDER BY
-<column>
+SELECT <columns>
+FROM <table>
+WHERE <condition>
+ORDER BY <column>
 ```
 
 ```SQL
-SELECT
-idnum, fullname
-FROM
-users
+SELECT idnum, fullname
+FROM users
 ```
 ![Select Data](/IMG/Shorts7/11.png)
 
 ```SQL
-SELECT
-password
-FROM
-users
-WHERE
-idnum < 12
+SELECT password
+FROM users
+WHERE idnum < 12
 ```
 
 ![Select Data](/IMG/Shorts7/12.png)
 
-
 ```SQL
-SELECT
-*
-FROM
-moms
-WHERE
-username = ‘jerry’
+SELECT *
+FROM moms
+WHERE username = ‘jerry’
 ```
 
 ![Select Data](/IMG/Shorts7/13.png)
@@ -178,29 +178,27 @@ username = ‘jerry’
 Extract information from multiple tables.
 
 ```SQL
-SELECT
-<columns>
-FROM
-<table1>
-JOIN
-<table2>
-ON
-<predicate>
+SELECT <columns>
+FROM <table1>
+JOIN <table2>
+ON <predicate>
 ```
 
 ```SQL
-SELECT
-users.fullname, moms.mother
-FROM
-users
-JOIN
-moms
-ON
-users.username = moms.username
+-- the ON line explicitly specifies the username columns in each table
+SELECT users.fullname, moms.mother
+FROM users
+JOIN moms
+ON users.username = moms.username
 ```
 
 ![SELECT JOIN](/IMG/Shorts7/14.png)
 ![SELECT JOIN](/IMG/Shorts7/15.png)
+
+Displays all the information from both tables;
+
+Second column displays the overlap between the two tables;
+
 ![SELECT JOIN](/IMG/Shorts7/16.png)
 ![SELECT JOIN](/IMG/Shorts7/17.png)
 
@@ -209,21 +207,15 @@ users.username = moms.username
 Modify information in a table.
 
 ```SQL
-UPDATE
-<table>
-SET
-<column> = <value>
-WHERE
-<predicate>
+UPDATE <table>
+SET <column> = <value>
+WHERE <predicate>
 ```
 
 ```SQL
-UPDATE
-users
-SET
-password = ‘yadayada’
-WHERE
-idnum = 10
+UPDATE users
+SET password = ‘yadayada’
+WHERE idnum = 10
 ```
 
 ![UPDATE JOIN](/IMG/Shorts7/18.png)
@@ -233,21 +225,19 @@ idnum = 10
 Remove information from a table.
 
 ```SQL
-DELETE FROM
-<table>
-WHERE
-<predicate>
+DELETE FROM <table>
+WHERE <predicate>
 ```
 
 ```SQL
-DELETE FROM
-users
-WHERE
-username = ‘newman’
+DELETE FROM users
+WHERE username = ‘newman’
 ```
 
 ![UPDATE JOIN](/IMG/Shorts7/19.png)
 ![UPDATE JOIN](/IMG/Shorts7/20.png)
+
+## [MyPHPAdmin](#table-ocontents)
 
 - All of these operations are pretty easy to do in the graphical interface of `phpMyAdmin`.
 

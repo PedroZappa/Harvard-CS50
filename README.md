@@ -20,7 +20,7 @@ ___
 # ** [ [`CourseWork`](#coursework) ] **
 
   Module | Type          | Title
-  :---:| ------------: | :---------:
+  :---:| :------------: | :---------:
   _ `Scratch` _
   0    | Problem Set 0     | [Scratch](/Code/ProblemSets/pset0/KeyboardPiano_CS50.sb3)
   |   _ `C` _ | |
@@ -114,11 +114,8 @@ ___
   7           |              | [Section 7](/Notes/Sections/Section_7.md)
   7           |              | [Shorts 7](/Notes/Shorts/Shorts_7.md)
 
-
-
 ___
 ___
-
 
 # [`Course Resources`](#course-resources)
 
@@ -145,9 +142,6 @@ Webpage 2 Markdown - https://codebeautify.org/html-to-markdown
 PDF 2 Markdown - https://converter.app/pdf-to-md/
 
 Pixel Art - https://cs50.ly/art
-
-</center>
-
 
 ___
 ___
