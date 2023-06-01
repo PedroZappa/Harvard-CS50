@@ -75,6 +75,11 @@ ___
   6   | Problem Set 6 | [DNA](/Code/ProblemSets/pset6/dna/)
   _ `SQL` _ | |
   7   | Lab 7 | [Songs](/Code/Labs/lab7/songs/)
+  7   | Problem Set 7 | [Movies](/Code/ProblemSets/pset7/movies/)
+  7   | Problem Set 7 | [Fiftyville](/Code/ProblemSets/pset7/fiftyville/)
+  _ `HTML, CSS, JavaScript` _ | |
+
+
 
 ___
 ___
@@ -113,7 +118,7 @@ ___
   7           |              | [Lecture 7](/Notes/Lectures/Lecture_7.md)
   7           |              | [Section 7](/Notes/Sections/Section_7.md)
   7           |              | [Shorts 7](/Notes/Shorts/Shorts_7.md)
-
+  || _ `HTML, CSS, JavaScript` _ | |
 ___
 ___
 
