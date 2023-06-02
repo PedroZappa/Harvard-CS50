@@ -119,6 +119,8 @@ ___
   7           |              | [Section 7](/Notes/Sections/Section_7.md)
   7           |              | [Shorts 7](/Notes/Shorts/Shorts_7.md)
   || _ `HTML, CSS, JavaScript` _ | |
+  8           |              | [Lecture 8](/Notes/Lectures/Lecture_8.md)
+
 ___
 ___
 

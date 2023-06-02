@@ -4,6 +4,8 @@
 
 ___
 
+## `Table o'Contents`
+
 * [Welcome!](#welcome)
 * [Flat-File Database](#flat-file-database)
 * [Relational Databases](#relational-databases)
