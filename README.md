@@ -120,6 +120,7 @@ ___
   7           |              | [Shorts 7](/Notes/Shorts/Shorts_7.md)
   || _ `HTML, CSS, JavaScript` _ | |
   8           |              | [Lecture 8](/Notes/Lectures/Lecture_8.md)
+  8           |              | [Section 8](/Notes/Sections/Section_8.md)
 
 ___
 ___
