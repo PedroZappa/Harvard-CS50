@@ -15,7 +15,6 @@
 [Course Resources](#course-resources)
 
 ___
-___
 
 # ** [ [`CourseWork`](#coursework) ] **
 
@@ -121,6 +120,7 @@ ___
   || _ `HTML, CSS, JavaScript` _ | |
   8           |              | [Lecture 8](/Notes/Lectures/Lecture_8.md)
   8           |              | [Section 8](/Notes/Sections/Section_8.md)
+  8           |              | [Shorts 8](/Notes/Shorts/Shorts_8.md)
 
 ___
 ___
@@ -148,6 +148,8 @@ Webpage 2 PDF - https://www.web2pdfconvert.com/
 Webpage 2 Markdown - https://codebeautify.org/html-to-markdown
 
 PDF 2 Markdown - https://converter.app/pdf-to-md/
+
+PDF to <...> - https://tools.pdf24.org/en/
 
 Pixel Art - https://cs50.ly/art
 
