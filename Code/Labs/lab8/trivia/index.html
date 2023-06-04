@@ -5,23 +5,56 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
         <link href="styles.css" rel="stylesheet">
         <title>Trivia!</title>
+        <!-- add the jQuery library -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             // TODO: Add code to check answers to questions
-            let answer = 'Shoggoth';
-            let buttons = document.querySelectorAll('#user_answer');
-            // Loop through all answer buttons and add event listener to each one
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    // Check if the clicked answer is correct
-                    if (button.textContent === answer) {
-                        // Change to green
-                        button.style.backgroundColor = 'green';
-                    } else {
-                        // Change to red
-                        button.style.backgroundColor = 'red';
+            // Run script once the DOM is loaded
+            $(document).ready(() => 
+            {
+                // Part 1
+                // Listen for button clicks
+                $('div.section').on('click', '.btn', (event) => 
+                {
+                    // Check if the answer is correct
+                    let clicked = $(event.target).text();
+                    if (clicked === "H. P. Lovecraft") 
+                    {
+                        $(event.target).css('background-color', 'green');
+                        console.log(event.target);
+                        $('#print_answer').text("Correct!");
+                    } 
+                    else 
+                    {
+                        $(event.target).css('background-color', 'red');
+                        $('#print_answer').text("Incorrect!");
                     }
-                });
+                })
+
+                // Part 2
+                // Listen for submit
+                $('form').on('submit', (event) => 
+                {
+                    // Check if the answer is correct
+                    event.preventDefault();
+                    let correct = "Z";
+                    let innerHTML = $('#user_answer').val();
+                    console.log(innerHTML);
+                    console.log(event);
+                    if (innerHTML === correct) 
+                    {
+                        $('#user_answer').css('background-color', 'green');
+                        $('#print_answer2').text("Correct!");
+                    } 
+                    else 
+                    {
+                        $('#user_answer').css('background-color', 'red');
+                        $('#print_answer2').text("Incorrect!");
+                    }
+                })
+
             });
+            
         </script>
     </head>
     <body>
@@ -37,16 +70,24 @@
                 <h3>
                     What's the name of the creator of the creature that inspired and named the Shoggoth meme that humourously depicts, in art terms, how some data scientists understand LLMs?
                 </h3>
-                <button type="submit" id="user_answer">Hideo Kojima</button>
-                <button type="submit" id="user_answer">H. P. Lovecraft</button>
-                <button type="submit" id="user_answer">William Gibson</button>
-                <button type="submit" id="user_answer">David Foster Wallace</button>
+                <h2 id="print_answer"></h2>
+                <button type="submit" class="btn">Hideo Kojima</button>
+                <button type="submit" class="btn">H. P. Lovecraft</button>
+                <button type="submit" class="btn">William Gibson</button>
+                <button type="submit" class="btn">David Foster Wallace</button>
             </div>
 
             <div class="section">
                 <h2>Part 2: Free Response</h2>
                 <hr>
                 <!-- TODO: Add free response question here -->
+                <h3>What's my secret name?</h3>
+                <h2 id="print_answer2"></h2>
+                <!-- Form to enter a response -->
+                <form>
+                    <input type="text" id="user_answer">
+                    <button type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </body>

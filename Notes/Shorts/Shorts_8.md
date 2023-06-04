@@ -13,8 +13,19 @@
 * [HTTP](#http)
 * [HTML](#html)
 * [CSS](#css)
+    * [Common CSS Properties](#common-css-properties)
 * [JavaScript](#javascript)
+    * [Variables](#variables)
+    * [Conditionals](#conditionals)
+    * [Loops](#loops)
+    * [Functions](#functions)
+    * [Arrays](#arrays)
+    * [Objects](#objects)
+    * [Loop Redux](#loop-redux)
 * [DOM](#dom)
+    * [DOM Properties](#dom-properties)
+    * [DOM Methods](#dom-methods)
+    * [JQuery](#jquery)
 
 ___
 
@@ -509,12 +520,490 @@ ___
 
 ## [CSS](#table-ocontents)
 
+* `CSS` (`Cascading Style Sheets`) is another language we use to when constructing websites.
+
+* If `HTML` is used to organize the content that we aim to display on our pages, then CSS is the tool we use to customize our website’s look and feel.
+
+* Like `HTML`, `CSS` is not a programming language; it lacks logic. Rather, it is a `styling language` and its syntax describes how certain attributes of `HTML` elements should be modified.
+
+```css
+body { 
+    background-color: blue; 
+}
+```
+
+___
+
+* A `style sheet` is constructed by identifying a selector (in the last example, body) and then an open curly brace to indicate the beginning of the style sheet for that selector.
+
+* In between the curly brace you place a list of `key-value pairs` of style properties and values for those properties, each declaration ending with a semicolon.
+
+* Then a closing curly brace terminates the style sheet.
+
+___
+
+### [`Common CSS properties`](#table-ocontents)
+
+`border`: `style` `color` `width`
+
+* Applies a border of the specified color, width, and style (e.g., dotted, dashed, solid, ridge…).
+
+`background-color`: [`keyword` | `#<6-digit hex>`]
+
+* Sets the background color. Some colors are pre-defined in CSS.
+
+`color`: [`keyword` | `#<6-digit hex>`]
+
+* Sets the foreground color (usually text).
+
+___
+
+`font-size`: [`absolute size` | `relative size`]
+
+* Can use keywords (`xx-small`, `medium…`), fixed points (`10pt`, `12pt…`), percentage (`80%`, `120%`), or base off the most recent font size (`smaller`, `larger`).
+
+`font-family`: [`font name` | `generic name`]
+
+* Certain “`web safe`” fonts are pre-defined in `CSS`.
+
+`text-align`: [`left` | `right` | `center` | `justify`]
+
+* For displaying text.
+
+___
+
+Your selectors don’t have to apply only to `HTML` tag categories. There also exist `ID` selectors and `class` selectors.
+
+A `tag` selector will apply to all elements with a given HTML tag.
+
+```css
+h2 
+{
+    font-family: times; color: \#fefefe; 
+}
+```
+
+• An `ID` selector will apply only to an HTML tag with a unique identifier.
+
+```css
+#unique 
+{ 
+    border: 4px dotted blue; text-align: right; 
+}
+```
+
+• A `class` selector will apply only to those `HTML tags` that have been given identical `“class” attributes`.
+
+```css
+.students 
+{ 
+    background-color: yellow; opacity: 0.7;
+}
+```
+
+___
+
+* `Style sheets` can be written directly into your `HTML`.
+    * Place them within `<style>` tags within your page’s head.
+
+* `Style sheets` can also be written as separate `CSS` files and then linked in to your document.
+    * Use `<link>` tags within your page’s head to accomplish this.
+
 ___
 
 ## [JavaScript](#table-ocontents)
+
+* Like `PHP`, `JavaScript` is a modern programming language that is derived from the syntax at `C`.
+
+* It has been around just about as long as `PHP`, also having been invented in 1995.
+
+* `JavaScript`, `HTML`, and `CSS` make up the three languages defining most of the user experience on the web.
+
+____
+
+* To start writing `JavaScript`, open up a file with the `.js` file extension.
+
+* No need for any code delimiters like we had in `PHP`. Our website will know that our file is `JavaScript` because we'll explicitly tell it as much in an `HTML` tag.
+
+* Unlike `PHP` which runs server-side, `JavaScript` applications run client-side, on your own machine.
+
+___
+
+### Including JavaScript in your HTML
+
+* Just like CSS with `<style>` tags, you can directly write your `JavaScript` between `<script>` tags.
+
+* Just like CSS with `<link>` tags, you can write your JavaScript in separate files and link them in by using the `src` attribute of the `<script>` tag.
+
+___
+
+### [Variables](#table-ocontents)
+
+* `JavaScript` variables are similar to `PHP` variables.
+    * No type specifier.
+    * When a local variable is first declared, preface with the `var` keyword.
+
+> $x = 44;
+>
+> ~~$x = 44;~~
+>
+> var x = 44;
+
+___
+
+### [Conditionals](#table-ocontents)
+
+* All of the old favorites from `C` are still available for you to use.
+
+```js
+if
+else if
+else
+switch
+?:
+```
+
+___
+
+### [Loops](#table-ocontents)
+
+* All of the old favorites from `C` are still available for you to use.
+
+```js
+while
+do-while
+for
+```
+
+### [Functions](#table-ocontents)
+
+* All functions are introduced with the function keyword.
+
+* `JavaScript` functions, particularly those bound specifically to `HTML` elements, can be anonymous—you don't have to give them a name!
+
+* We'll revisit anonymity a little later, and we'll revisit "binding to `HTML` elements" in the video on the `Document Object Model`.
+
+___
+
+### [Arrays](#table-ocontents)
+
+* Declaring an array is pretty straightforward.
+
+```js
+var nums = [1, 2, 3, 4, 5]; 
+var mixed = [1, true, 3.333, 'five'];
+```
+
+___
+
+### [Objects](#table-ocontents)
+
+* `JavaScript` has the ability to behave as an `object-oriented programming` language.
+
+* An `object` is sort of analogous to a `C structure`.
+
+___
+
+* `C` structures contain a number of fields, which we might also call properties.
+    * But the properties themselves can not ever stand on their own.
+
+```c
+struct car 
+{ 
+    int year; 
+    char model[10]; 
+}
+```
+
+```c
+struct car herbie;
+herbie.year = 1963; 
+herbie.model = "Beetle";
+```
+
+___
+
+* `C structures` contain a number of fields, which we might also call properties.
+    * But the properties themselves can not ever stand on their own.
+
+* `Objects`, meanwhile, have properties but also methods, or functions that are inherent to the object, and mean nothing outside of it.
+    * Thus, like properties can methods not ever stand on their own.
+
+___
+Object oriented programming:
+
+```js
+object.function();
+```
+
+* The fields and methods of an object are similar in spirit to the idea of an associative array, with which we're familiar from `Python`.
+
+```js
+var herbie = {year : 1963, model: 'Beetle'};
+```
+
+### [Loops Redux](#table-ocontents)
+
+* How do we iterate across all of the `key-value pairs` of an `object` (or indeed, all of the `elements` of an `array`)?
+
+Iterate over all the keys:
+
+```js
+for (var key in object) { 
+    // use object[key] in here 
+}
+```
+
+Iterate over all the values:
+
+```js
+for (var key of object) { 
+    // use key in here 
+}
+```
+
+___
+
+```js
+var wkArray = [
+    'Monday, 
+    'Tuesday', 
+    'Wednesday', 
+    'Thursday', 
+    'Friday', 
+    'Saturday', 
+    'Sunday'
+];
+```
+
+```js
+for (var day in wkArray) { 
+    console.log(day); 
+}
+```
+
+```js
+for (var day of wkArray) { 
+    console.log(day); 
+}
+```
+
+### Printing and variable interpolation
+
+```js
+console.log(wkArray[day] + ' is day number ' 
+    + (day + 1) + 
+    ' of the week!');
+```
+
+```js
+console.log(wkArray[day] + ' is day number ' 
+    + (parseInt(day) + 1) + 
+    'of the week!');
+```
+
+* `Arrays` are a `special case` of an `object` (in fact, everything in `JavaScript` is a `special case` of an `object`), and has numerous methods that can applied to them:
+    * `array.size()`, `array.pop()`, `array.push(x)`, `array.shift()`;
+
+* There is also a method for arrays called `map()`, which can be used to apply a function to all elements of an array.
+    * A great situation to use an anonymous function
+
+___
+
+```js
+var nums = [1, 2, 3, 4, 5];
+
+nums = nums.map(function(num) { 
+    return num * 2; 
+});
+```
+
+```js
+var nums = [2, 4, 6, 8, 10]; 
+
+nums = nums.map(function(num) { 
+    return num * 2; 
+});
+```
+
+### [`Event Handlers`](#table-ocontents)
+
+* An event in `HTML` and `JavaScript` is a response to user interaction with the web page.
+    * A user clicks a button, a page has finished loading, a user has hovered over a portion of the page, the user typed in an input field.
+
+* `JavaScript` has support for event handlers, which are callback functions that respond to `HTML` events.
+    * Many `HTML` elements have support for events as an attribute.
+
+```html
+<html>
+    <head>
+        <title>
+            Event Handlers
+        </title>
+    </head>
+    <body>
+        <button onclick="">
+            Button 1
+        </button>
+        <button onclick="">
+            Button 2
+        </button>
+    </body>
+</html>
+```
+
+___
+
+* We can write a generic event handler in `JavaScript`, creating an event `object`, that will tell us which of these two buttons was clicked.
+
+```html
+<html>
+    <head>
+        <title>
+            Event Handlers
+        </title>
+    </head>
+    <body>
+        <button onclick="alertName(event)">
+            Button 1
+        </button>
+        <button onclick="alertName(event)">
+            Button 2
+        </button>
+    </body>
+</html>
+```
+
+```js
+function alertName(event) 
+{ 
+    var trigger = event.srcElement;
+    alert('You clicked on ' + trigger.innerHTML); 
+}
+```
 
 ___
 
 ## [DOM](#table-ocontents)
 
+* As we’ve seen, `JavaScript` objects are incredibly flexible, and can contain various fields, even when those fields are other objects.
+
+* The document object is one way of employing this paradigm, whereby that object organizes the entire contents of a web page.
+
+* By organizing an entire page into a `JavaScript` object, we can manipulate the page’s elements programmatically.
+
 ___
+
+```html
+<html>
+    <head>
+        <title>
+            Hello, world
+        </title>
+    </head>
+    <body>
+        <h2>
+            Here’s my page
+        </h2>
+        <p>
+            World, hello
+        </p>
+        <a href=“test.html”>Link</a>
+    </body>
+</html>
+```
+
+![Hello, world](/IMG/Shorts8/34.png)
+
+• The `document object` itself, as well as all of the objects contained within it, have a number of `properties` and a number of `methods` that can be used to drill down to a very specific piece of your website.
+
+• By resetting those `properties` or calling certain `methods`, the contents of our web pages can change without us needing to refresh the page.
+
+___
+
+### [`DOM Properties`](#table-ocontents)
+
+DOM Property | Description
+--- | ---
+`innerHTML` | Holds the HTML inside a set of HTML tags.
+`nodeName` | The name of an HTML element or element’s attribute.
+`id` | The “id” attribute of an HTML element.
+`parentNode` | A reference to the node one level up in the DOM.
+`childNodes` | An array of references to the nodes one level down in the DOM.
+`attributes` | An array of attributes of an HTML element.
+`style` | An object encapsulating the CSS/HTML styling of an element.
+
+___
+
+* Gets the element with a given ID below this point in the DOM.
+
+___
+
+### [`DOM Methods`](#table-ocontents)
+
+DOM Method | Description
+--- | ---
+`getElementById(id)` | Gets the element with a given ID below this point in the DOM.
+`getElementsByTagName(tag)` | Gets all elements with the given tag below this point in the DOM.
+`appendChild(node)` | Add the given node to the DOM below this point.
+`removeChild(node)` | Remove the specified child node from the DOM.
+
+___
+
+* If we start from document, we can get to any piece of our web page that we choose, through careful use of DOM properties and methods.
+
+___
+
+### [jQuery](#table-ocontents)
+
+* Because DOM manipulation is so common with JavaScript, and because the JavaScript to do so can get quite lengthy, people wanted alternatives.
+
+* jQuery is a popular open-source library, released in 2006, that is designed to simplify client-side scripting (such as DOM manipulations).
+
+___
+
+> document.getElementById(‘colorDiv’).style.backgroundColor = ‘green’
+
+> ~~document.getElementById(‘colorDiv’).style.backgroundColor = ‘green’~~
+
+> $(‘#colorDiv’).css(‘background-color’, ‘green’);
+
+___
+
+Change color
+
+```js
+function changeColor(color)
+{
+    document.getElementById(‘colorDiv’).style.backgroundColor = color;
+}
+```
+
+Change color Event Handler
+
+```js
+function changeColorEvent(event)
+{
+    var triggerObject = event.srcElement;
+    document.getElementById('colorDiv').style.backgroundColor = triggerObject.innerHTML.toLowerCase();
+}
+```
+
+same but in jQuery
+
+```js
+// When page is loaded
+$(document).ready(function() {
+    // Fetch every element with a class of jQButton
+    $('.jQButton').click(function() {
+        // Change background color
+        $('#colorDiv').css('background-color', this.innerHTML.toLowerCase());
+    })
+})
+```
+
+[jQuery Documentation](https://api.jquery.com)
+
+___
+
+Return to [`CS50x`](/README.md)

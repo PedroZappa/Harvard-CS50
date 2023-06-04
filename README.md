@@ -77,6 +77,7 @@ ___
   7   | Problem Set 7 | [Movies](/Code/ProblemSets/pset7/movies/)
   7   | Problem Set 7 | [Fiftyville](/Code/ProblemSets/pset7/fiftyville/)
   _ `HTML, CSS, JavaScript` _ | |
+  8   | Lab 8 | [Trivia](/Code/Labs/lab8/trivia/)
 
 
 

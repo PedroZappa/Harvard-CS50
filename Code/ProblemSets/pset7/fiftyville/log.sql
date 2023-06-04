@@ -312,7 +312,7 @@ id|name|year|month|day|transcript
 -- thief was out of the bakery at 10:15
 -- Ruth talks about the bakery footage
 -- eugene talks about somebody at the ATM
--- Raymond short phone call and aflight ticket
+-- Raymond short phone call and a flight ticket
 
 
 -- Query 2
@@ -338,8 +338,8 @@ id|year|month|day|hour|minute|activity|license_plate
 .headers on
 SELECT people.name, bakery_security_logs.activity, bakery_security_logs.license_plate, bakery_security_logs.year, bakery_security_logs.month, bakery_security_logs.day, bakery_security_logs.hour, bakery_security_logs.minute
     FROM bakery_security_logs
-    JOIN people ON people.license_plate = bakery_security_logs.license_plate
-    WHERE bakery_security_logs.year = 2021 AND bakery_security_logs.month = 7 AND bakery_security_logs.day = 28 AND bakery_security_logs.hour = 10 AND bakery_security_logs.minute BETWEEN 15 AND 25;
+JOIN people ON people.license_plate = bakery_security_logs.license_plate
+WHERE bakery_security_logs.year = 2021 AND bakery_security_logs.month = 7 AND bakery_security_logs.day = 28 AND bakery_security_logs.hour = 10 AND bakery_security_logs.minute BETWEEN 15 AND 25;
 
 name|activity|license_plate|year|month|day|hour|minute
 Vanessa|exit|5P2BI95|2021|7|28|10|16
@@ -402,6 +402,13 @@ id|account_number|year|month|day|atm_location|transaction_type|amount|account_nu
 
 -- Query 6
 -- Check phone calls
+.headers on
+SELECT phone_calls.caller, phone_calls.receiver, phone_calls.year, phone_calls.month, phone_calls.day, phone_calls.duration
+    FROM phone_calls
+WHERE phone_calls.year = 2021
+    AND phone_calls.month = 7
+    AND phone_calls.day = 28
+    AND phone_calls.duration < 60;
 
 id|caller|receiver|year|month|day|duration
 221|(130) 555-0289|(996) 555-8899|2021|7|28|51
@@ -413,6 +420,8 @@ id|caller|receiver|year|month|day|duration
 261|(031) 555-6622|(910) 555-3251|2021|7|28|38
 279|(826) 555-1652|(066) 555-9701|2021|7|28|55
 281|(338) 555-6650|(704) 555-2131|2021|7|28|54
+
+
 
 
 -- QUERY 7
@@ -439,7 +448,7 @@ Benista|(338) 555-6650|(704) 555-2131|2021|7|28|54
 
 
 -- Query 8
--- Explore airports looing for Fiftyville
+-- Explore airports looking for Fiftyville
 .headers on
 SELECT *
     FROM airports;
@@ -555,5 +564,4 @@ WHERE phone_calls.year = 2021
     AND phone_calls.duration < 60
     AND people.name = 'Bruce';
 
-name|caller|receiver_name|receiver|year|month|day|duration
-Bruce|(367) 555-5533|Robin|(375) 555-8161|2021|7|28|45
+
