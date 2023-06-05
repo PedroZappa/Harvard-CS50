@@ -127,6 +127,10 @@ ___
   8           |              | [Section 8](/Notes/Sections/Section_8.md)
   8           |              | [Shorts 8](/Notes/Shorts/Shorts_8.md)
   || _ `Flask` _ | |
+  9           |              | [Lecture 9](/Notes/Lectures/Lecture_9.md)
+  9           |              | [Section 9](/Notes/Sections/Section_9.md)
+  9           |              | [Shorts 9](/Notes/Shorts/Shorts_9.md)
+
 ___
 ___
 
