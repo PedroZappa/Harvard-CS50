@@ -78,6 +78,10 @@ ___
   7   | Problem Set 7 | [Fiftyville](/Code/ProblemSets/pset7/fiftyville/)
   _ `HTML, CSS, JavaScript` _ | |
   8   | Lab 8 | [Trivia](/Code/Labs/lab8/trivia/)
+  8   | Problem Set 8 | [Homepage](/Code/ProblemSets/pset8/homepage/)
+  _ `Flask` _ | |
+
+
 
 
 
@@ -122,7 +126,7 @@ ___
   8           |              | [Lecture 8](/Notes/Lectures/Lecture_8.md)
   8           |              | [Section 8](/Notes/Sections/Section_8.md)
   8           |              | [Shorts 8](/Notes/Shorts/Shorts_8.md)
-
+  || _ `Flask` _ | |
 ___
 ___
 

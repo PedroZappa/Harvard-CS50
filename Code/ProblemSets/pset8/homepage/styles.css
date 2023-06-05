@@ -1,0 +1,35 @@
+/* Implement 5 CSS Selectors */
+
+body {
+    text-align: center;
+}
+
+main {
+    margin: auto;
+}
+
+span {
+    display: block;
+}
+
+img {
+    width: 80%;
+    padding: 1rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+
+.img_container {
+    display: flex;
+    /* justify-content: space-between; */
+    flex-wrap: wrap;
+}
+
+.link_container {
+    // display links in a row
+    display: flex;
+    flex-wrap: wrap;
+}
