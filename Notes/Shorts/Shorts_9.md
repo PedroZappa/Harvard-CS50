@@ -9,13 +9,13 @@ ___
 
 ## [`Flask`](#table-ocontents)
 
-* Python is not just used for command-line programming, though that’s a major use case.
-* Python contains native functionality to support networking and more, enabling site backends to be written in Python.
+* `Python` is not just used for `command-line programming`, though that’s a major use case.
+* `Python` contains native functionality to support networking and more, enabling site backends to be written in `Python`.
 
 ___
 
 * `Web frameworks` make this process much easier, abstracting away the minutia of Python’s syntax and providing helper functions.
-* Some of the most popular include: Django, Pyramid, and Flask.
+* Some of the most popular include: `Django`, `Pyramid`, and `Flask`.
 
 * We use `Flask` in `CS50` because it is lightweight for ease of use in `CS50 IDE`, while still being feature-rich.
 
@@ -36,7 +36,7 @@ ___
         </body>
 </html>
 ```
-
+<!-- 
 ```html
 <html>
     <head>
@@ -74,20 +74,20 @@ ___
         The current time in Cambridge is 14:11
     </body>
 </html>
-```
+``` -->
 
 ___
 
-* Websites that are pure HTML are completely static. The only way we can update the content of our pages is to manually open up our source files, edit and save, and then the next time the user visits or refreshes the page they’ll get the content.
+* Websites that are pure `HTML` are completely static. The only way we can update the content of our pages is to manually open up our source files, edit and save, and then the next time the user visits or refreshes the page they’ll get the content.
 
-* Incorporating Python into our code can make our code quite a bit more flexible and introduce a way for our pages to update or be dynamic without requiring our intervention.
+* Incorporating `Python` into our code can make our code quite a bit more flexible and introduce a way for our pages to update or be dynamic without requiring our intervention.
 
 ```py
 from flask import Flask 
 from datetime import datetime 
 from pytz import timezone 
 
-app = Flask(**name**)
+app = Flask(__name__)
 
 @app.route("/") 
 def time(): 
@@ -107,7 +107,7 @@ from flask import Flask
 After importing the `Flask module`, we need to initiate a `Flask application`.
 
 ```py
-app = Flask(**name**)
+app = Flask(__name__)
 ```
 
 From there, it’s just a matter of writing functions that define the behavior of our application.
@@ -242,11 +242,11 @@ ___
 
 ___
 
-* XMLHttpRequests have two additional properties that are used to detect when the page finishes loading.
+* `XMLHttpRequests` have two additional properties that are used to detect when the page finishes loading.
 
 * The readyState property will change from from 0 (request not yet initialized) to 1, 2, 3, and finally 4 (request finished, response ready).
 
-* The status property will (hopefully!) be 200 (OK).
+* The status property will (hopefully!) be `200 (OK)`.
 
 * Then just make your asynchronous request using the open() method to define the request and the send() method to actually send it.
 

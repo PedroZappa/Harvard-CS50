@@ -1,0 +1,11 @@
+<!-- Where to print to -->
+{% extends "layout.html" %}
+
+<!-- Body to be printed -->
+{% block body %}
+    <!-- Get input into /greet route -->
+    <form action="/" method="post">
+        <input autocomplete="off" autofocus placeholder="Name" name="name" type="text">
+        <button type="submit">Greet</button>
+    </form>
+{% endblock %}

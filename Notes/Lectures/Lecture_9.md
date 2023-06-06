@@ -95,7 +95,7 @@ requirements.txt
 
     Once you get it running, you will be prompted to click a link. Once you navigate to that webpage, try adding `?name=[Your Name]` to the base URL in your browser’s URL bar.
     
-* Improving upon our program, we know that most users will not type arguments into the address bar. Instead, programmers rely upon users to fill out forms on web pages. Accordingly, we can modify index.html as follows:
+* Improving upon our program, we know that most users will not type arguments into the address bar. Instead, programmers rely upon users to fill out forms on web pages. Accordingly, we can modify `index.html` as follows:
 
 ```html
 <!DOCTYPE html>
@@ -182,7 +182,7 @@ ___
 
 * Then, modify your `index.html` as follows:
 
-```html
+```jinja
 {% extends "layout.html" %}
 
 {% block body %}
@@ -199,7 +199,7 @@ ___
 
 *   Finally, change `greet.html` as follows:
 
-```html
+```jinja
 {% extends "layout.html" %}
 
 {% block body %}
@@ -209,8 +209,7 @@ ___
 
     Notice how this code is shorter and more compact.
 
-[POST](#table-ocontents)
--------------
+## [POST](#table-ocontents)
 
 *   You can imagine scenarios where it is not safe to utilize `get`, as usernames and passwords would show up in the URL.
 *   We can utilize the method `post` to help with this problem by modifying `app.py` as follows:
@@ -332,7 +331,7 @@ def register():
 
 * Fourth, create a file in templates called `success.html` as follows:
 
-```html
+```jinja
 {% extends "layout.html" %}
 
 {% block body %}
@@ -342,14 +341,14 @@ def register():
 
 * Finally, create a file in templates called `failure.html` as follows:
 
-```html
+```jinja
 {% extends "layout.html" %}
 
 {% block body %}
     You are not registered!
 {% endblock %}
 ```
-    
+
 * You can imagine how we might want to accept the registration of many different registrants. We can improve `app.py` as follows:
 
 ```py
@@ -404,7 +403,7 @@ def registrants():
 
 * Further, create a new template called `registrants.html` as follows:
 
-```py
+```jinja
 {% extends "layout.html" %}
 
 {% block body %}
@@ -431,13 +430,13 @@ def registrants():
     Notice that `{% for name in registrants %}...{% endfor %}` will iterate through each of the registrants. Very powerful to be able to iterate on a dynamic web page!
 
 * Executing `flask run` and entering numerous names and sports, you can browse to `/registrants` to view what data has been logged.
-* You now have a web application! However, there are some security flaws! Because everything is client-side, an adversary could change the HTML and _hack_ a website. Further, this data will not persist if the server is shut down. Could there be some way we could have our data persist even when the server restarts?
+* You now have a web application! However, there are some security flaws! Because everything is client-side, an adversary could change the `HTML` and _`hack`_ a website. Further, this data will not persist if the server is shut down. Could there be some way we could have our data persist even when the server restarts?
 
 ___
 
-## [Flask and SQL](#flask-and-sql)
+## [Flask and SQL](#table-ocontents)
 
-* Just as we have seen how Python can interface with a SQL database, we can combine the power of Flask, Python, and SQL to create a web application where data will persist!
+* Just as we have seen how `Python` can interface with a `SQL` database, we can combine the power of `Flask`, `Python`, and `SQL` to create a `web application` where data will persist!
 * To implement this, you will need to take a number of steps.
 * First, modify `requirements.txt` as follows:
 
@@ -586,71 +585,75 @@ def registrants():
 
 ___
 
-## [Session](#session)
+## [Session](#table-ocontents)
 
 * While the above code is useful from an administrative standpoint, where a back-office administrator could add and remove individuals from the database, one can imagine how this code is not safe to implement on a public server.
-* For one, bad actors could make decisions on behalf of other users by hitting the deregister button – effectively deleting their recorded answer from the server.
-* Web services like Google use login credentials to ensure users only have access to the right data.
-* We can actually implement this itself using _cookies_. Cookies are small files that are stored on your computer, such that your computer can communicate with the server and effectively say, “I’m an authorized user that has already logged in.”
+* For one, bad actors could make decisions on behalf of other users by hitting the `deregister` button – effectively deleting their recorded answer from the server.
+* `Web services` like `Google` use `login credentials` to ensure users only have access to the right data.
+* We can actually implement this itself using _`cookies`_. Cookies are small files that are stored on your computer, such that your computer can communicate with the server and effectively say, “I’m an authorized user that has already logged in.”
 * In the simplest form, we can implement this by creating a folder called `login` and then adding the following files.
 * First, create a file called `requirements.txt` that reads as follows:
-    
-        Flask
-        Flask-Session
-        
-    
+
+```note
+Flask
+Flask-Session
+```
+
     Notice that in addition to `Flask`, we also include `Flask-Session`, which is required to support login sessions.
-    
+
 * Second, in a `templates` folder, create a file called `layout.html` that appears as follows:
-    
-        <!DOCTYPE html>
-        
-        <html lang="en">
-            <head>
-                <meta name="viewport" content="initial-scale=1, width=device-width">
-                <title>store</title>
-            </head>
-            <body>
-                {% block body %}{% endblock %}
-            </body>
-        </html>
-        
+
+```jinja
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <title>store</title>
+    </head>
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+</html>
+```
     
     Notice this provides a very simple layout with a title and a body.
     
 * Third, create a file in the `templates` folder called `index.html` that appears as follows:
-    
-        {% extends "layout.html" %}
-        
-        {% block body %}
-        
-            {% if session["name"] %}
-                You are logged in as {{ session["name"] }}. <a href="/logout">Log out</a>.
-            {% else %}
-                You are not logged in. <a href="/login">Log in</a>.
-            {% endif %}
-        
-        {% endblock %}
-        
+
+```jinja
+{% extends "layout.html" %}
+
+{% block body %}
+
+    {% if session["name"] %}
+        You are logged in as {{ session["name"] }}. <a href="/logout">Log out</a>.
+    {% else %}
+        You are not logged in. <a href="/login">Log in</a>.
+    {% endif %}
+
+{% endblock %}
+```
     
     Notice that this file looks to see if `session["name"]` exists. If it does, it will display a welcome message. If not, it will recommend you browse to a page to log in.
     
 * Fourth, create a file called `login.html` and add the following code:
-    
-        {% extends "layout.html" %}
-        
-        {% block body %}
-        
-            <form action="/login" method="post">
-                <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-                <button type="submit">Log In</button>
-            </form>
-        
-        {% endblock %}
-        
-    
+
+```jinja
+{% extends "layout.html" %}
+
+{% block body %}
+
+    <form action="/login" method="post">
+        <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+        <button type="submit">Log In</button>
+    </form>
+
+{% endblock %}
+```
+
     Notice this is the layout of a basic login page.
-    
+
 * Finally, create a file in the `login` folder called `app.py` and write code as follows:
 
 ```py
@@ -686,14 +689,14 @@ def logout():
     session["name"] = None
     return redirect("/")
 ```
-    
+
     Notice the modified _imports_ at the top of the file, including `session`, which will allow for you to support sessions. Most important, notice how `session["name"]` is used in the `login` and `logout` routes. The `login` route will assign the login name provided and assign it to `session["name"]`. However, in the `logout` route, the logging out is implemented by simply setting `session["name"]` to `None`.
-    
+
 * You can read more about sessions in the [Flask documentation](https://flask.palletsprojects.com/en/2.2.x/api/?highlight=session#flask.session).
 
 ___
 
-## [Store](#store)
+## [Store](#table-ocontents)
 
 * Moving on to a final example of utilizing Flask’s ability to enable a session.
 * We examined the following code for `store` in `app.py`. The following code was shown:
@@ -744,9 +747,9 @@ def cart():
 
 ___
 
-## [API](#api)
+## [API](#table-ocontents)
 
-* An _application program interface_ or _API_ is a series of specifications that allow you to interface with another service. For example, we could utilize IMDB’s API to interface with their database. We might even integrate APIs for handling specific types of data downloadable from a server.
+* An _`application program interface`_ or _`API`_ is a series of specifications that allow you to interface with another service. For example, we could utilize IMDB’s `API` to interface with their database. We might even integrate `API`s for handling specific types of data downloadable from a server.
 * We looked at an example called `shows`.
 * Looking at `app.py`, we saw the following:
 
@@ -780,7 +783,7 @@ def search():
 
 * Looking at `search.html`, you’ll notice that it is very simple:
 
-```html
+```jinja
 {% for show in shows %}
     <li>{{ show["title"] }}</li>
 {% endfor %}
@@ -820,12 +823,12 @@ def search():
 ```
 
     Notice an event listener is utilized to dynamically query the server to provide a list that matches the title provided. This will locate the `ul` tag in the HTML and modify the web page accordingly to include the list of the matches.
-    
+
 * You can read more in the [AJAX documentation](https://api.jquery.com/category/ajax/).
 
 ___
 
-## [JSON](#json)
+## [JSON](#table-ocontents)
 
 * _`JavaScript Object Notation`_ or _`JSON`_ is text file of dictionaries with keys and values. This is a raw, computer-friendly way to get lots of data.
 * `JSON` is a very useful way of getting back data from the server.
@@ -853,6 +856,7 @@ ___
                 let shows = await response.json();
                 let html = '';
                 for (let id in shows) {
+                    // Escape < and &
                     let title = shows[id].title.replace('<', '&lt;').replace('&', '&amp;');
                     html += '<li>' + title + '</li>';
                 }
@@ -871,7 +875,7 @@ ___
 
 ___
 
-## [Summing Up](#summing-up)
+## [Summing Up](#table-ocontents)
 
 In this lesson, you learned how to utilize Python, SQL, and Flask to create web applications. Specifically, we discussed…
 
