@@ -80,6 +80,7 @@ ___
   8   | Lab 8 | [Trivia](/Code/Labs/lab8/trivia/)
   8   | Problem Set 8 | [Homepage](/Code/ProblemSets/pset8/homepage/)
   _ `Flask` _ | |
+  9   | Lab 9 | [Birthdays](/Code/Labs/lab9/birthdays/)
 
 
 
