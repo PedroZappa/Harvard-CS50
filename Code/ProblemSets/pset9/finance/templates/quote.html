@@ -5,7 +5,19 @@
 {% endblock %}
 
 {% block main %}
-    <form action="/quote" method="post">
-        <input class="form-control mx-auto w-auto" autocomplete="off" autofocus type="text" name="symbol" placeholder="Symbol">
+
+    <h3>Get a Stock Quote</h3>
+    <form action="/quote" method="post" class="form-flex">
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" autocomplete="off" autofocus type="text" name="symbol" placeholder="Symbol">
+        </div>
+        <button class="btn btn-primary" type="submit">Get</button>
     </form>
+    {% if quote %}
+
+        <h3>{{ quote['name'] }} ({{ quote['symbol'] }})</h3>
+        <p>Price: ${{ quote['price'] }}</p>
+        
+    {% endif %}
+
 {% endblock %}

@@ -45,64 +45,47 @@ def buy():
     """Buy shares of stock"""
     if request.method == "POST":
         #  Unpack POST data
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
         shares = request.form.get("shares")
         # Check current stock price
         quote = lookup(symbol)
         
-        ''' Validate quote & shares '''
+        ''' Validate symbol, quote & shares '''
         # if symbol doesn't exist
-        if not quote:
-            return apology("invalid stock symbol", 403)
-        
+        if not symbol:
+            return apology("invalid symbol", 403)
         # Ensure shares was submitted
-        if not shares:
-            return apology("must provide shares", 403)
+        if not shares or not shares.isdigit() or int(shares) <= 0:
+            return apology("must provide a positive number shares", 403)
+        #  Validate quote
+        if quote is None:
+            return apology("invalid symbol", 403)
         
         
         ''' Make the Purchase '''
-        # Cast symbol to uppercase
-        symbol = symbol.upper()
         # Ensure shares is a number
         shares = int(shares)
         # Price to be paid
-        purchase = quote["price"] * shares
-        
+        price = quote["price"] 
+        total_price = price * int(shares)
         # Select user's cash balance
-        balance = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
-        balance = balance[0]["cash"]
-        remainder = balance - purchase
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash = cash[0]["cash"]
+        remainder = cash - price
         
-        #  If price exceeds balance, return 
-        if remainder < 0:
-            return apology("not enough money", 403)
-        
-        # Query shares table for row with this user_id and symbol
-        row = db.execute("SELECT * FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
-        
-        # if row doesn't exist, create it
-        if not row:
-            db.execute("INSERT INTO portfolio (user_id, symbol) VALUES (?, ?)", session["user_id"], symbol)
-        
-        # Get previous # of shares owned by user
-        prev_shares = db.execute("SELECT shares FROM portfolio WHERE user_id = ? AND symbol = ?", session["user_id"], symbol)
-        prev_shares = prev_shares[0]["shares"]
-        
-        #  Add purchased shares to prev_shares
-        updated_shares = prev_shares + shares
+        #  If price exceeds balance, return
+        if cash < total_price:
+            return apology("not enough money", 403) 
         
         ''' Update Database '''
         
-        # Update shares table
-        db.execute("UPDATE portfolio SET shares = ? WHERE user_id = ? AND symbol = ?", updated_shares, session["user_id"], symbol)
-        
-        # Update user's cash balance
-        db.execute("UPDATE users SET cash = ? WHERE id = ?", remainder, session["user_id"])
+        # Update users table
+        db.execute("UPDATE users SET cash = cash - ? WHERE id = ?", total_price, session["user_id"])
         
         # Update history table
-        db.execute("INSERT INTO history (user_id, symbol, shares, method, price) VALUES (?, ?, ?, 'Buy', ?)", session["user_id"], symbol, shares, quote["price"])
+        db.execute("INSERT INTO history (user_id, symbol, shares, method, price) VALUES (?, ?, ?, 'Buy', ?)", session["user_id"], symbol, shares, price)
         
-        
+        flash(f"Bought {shares} shares of {symbol} for {usd(total_price)}")
         #  Return to homepage
         return redirect("/")
     
@@ -172,11 +155,6 @@ def quote():
     if request.method == "POST":
         # Unpack the POST data
         symbol = request.form.get("symbol")
-        
-        # Ensure symbol was submitted
-        if not symbol:
-            return apology("must provide symbol", 403)
-        
         # Query database for symbol
         quote = lookup(symbol)
         
@@ -185,7 +163,7 @@ def quote():
             return apology("invalid symbol", 403)
         
         # Display the quote
-        return render_template("quoted.html", quote=quote)
+        return render_template("quote.html", quote=quote)
     
     else:
         # Get stock quote page

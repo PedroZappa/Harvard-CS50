@@ -6,8 +6,11 @@
 
 {% block main %}
 
-    <h1>{{ quote.name }}</h1>
-    <p>${{ quote.price }}</p>
-    <p>{{ quote.symbol }}</p>
+    {% if quote %}
+
+        <h3>{{ quote['name'] }} ({{ quote['symbol'] }})</h3>
+        <p>Price: ${{ quote['price'] }}</p>
+        
+    {% endif %}
 
 {% endblock %}
