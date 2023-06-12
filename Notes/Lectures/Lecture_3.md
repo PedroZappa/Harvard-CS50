@@ -1,7 +1,6 @@
-[Lecture 3](#lecture-3): _``_
-=======================
-#### Return to [`CS50x`](/README.md)
-=======================
+# [Lecture 3](/README.md): _`Algorithms`_
+
+## _`Table o'Contents`_
 
 *   [Welcome!](#welcome)
 *   [Algorithms](#algorithms)

@@ -132,6 +132,9 @@ ___
   9           |              | [Lecture 9](/Notes/Lectures/Lecture_9.md)
   9           |              | [Section 9](/Notes/Sections/Section_9.md)
   9           |              | [Shorts 9](/Notes/Shorts/Shorts_9.md)
+  || _ `Cybersecurity` _ | |
+  9           |              | [Lecture](/Notes/Lectures/Lecture_11_Cybersecurity.md)
+
 
 ___
 ___

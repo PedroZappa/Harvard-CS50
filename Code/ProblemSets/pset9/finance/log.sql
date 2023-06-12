@@ -86,3 +86,14 @@ symbol|sum_shares
 NFLX|3
 T|8
 ZZZ|1400
+
+
+-- Check Chow's stocks
+.headers ON
+SELECT id, username, cash, history.symbol, history.shares, history.price, history.transacted
+    FROM users
+JOIN history ON users.id = history.user_id;
+
+symbol|sum_shares
+T|10
+ZZZ|250

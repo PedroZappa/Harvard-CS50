@@ -1,9 +1,6 @@
-[Lecture 1](#lecture-1): _`C`_
-=======================
+# [Lecture 1](/README.md): _`C`_
 
-#### Return to [`CS50x`](/README.md)
-
-=======================
+## _`Table o'Contents`_
 
 *   [Welcome!](#welcome)
 *   [Hello World](#hello-world)

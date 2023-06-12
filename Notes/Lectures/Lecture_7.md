@@ -1,8 +1,4 @@
-# [Lecture 7](#lecture-7): _`SQL`_
-
-#### Return to [`CS50x`](/README.md)
-
-___
+# [Lecture 7](/README.md): _`SQL`_
 
 ## `Table o'Contents`
 

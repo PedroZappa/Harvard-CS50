@@ -1,4 +1,4 @@
-# [Shorts_8](/README.md): `SQL`
+# [Shorts_8](/README.md): `HTML, CSS & JavaScript`
 
 ## `Table o'Contents`
 

@@ -6,3 +6,7 @@ if string1 == string2:
 else:
     print("The strings are not equal")
 
+groceries = [ "tomato", "pear", "apple", "banana" ]
+
+for item in groceries:
+    print(item)

@@ -1,28 +1,26 @@
-[Lecture 4](#lecture-4): _`Memory`_
-=======================
-#### Return to [`CS50x`](/README.md)
-=======================
+# [Lecture 4](/README.md): _`Memory`_
 
-*   [Welcome!](#welcome)
-*   [Memory](#memory)
-*   [Hexadecimal](#hexadecimal)
-*   [Addresses](#addresses)
-*   [Pointers](#pointers)
-*   [Strings](#strings)
-*   [Pointer Arithmetic](#pointer-arithmetic)
-*   [Comparing Strings](#comparing-strings)
-*   [Copying](#copying)
-*   [Valgrind](#valgrind)
-*   [Garbage Values](#garbage-values)
-*   [Pointer Fun with Binky](#pointer-fun-with-binky)
-*   [Swap](#swap)
-*   [Overflow](#overflow)
-*   [`scanf`](#scanf)
-*   [Files](#files)
-*   [Summing Up](#summing-up)
+## _`Table o'Contents`_
 
-[Welcome!](#welcome)
---------------------
+* [Welcome!](#welcome)
+* [Memory](#memory)
+* [Hexadecimal](#hexadecimal)
+* [Addresses](#addresses)
+* [Pointers](#pointers)
+* [Strings](#strings)
+* [Pointer Arithmetic](#pointer-arithmetic)
+* [Comparing Strings](#comparing-strings)
+* [Copying](#copying)
+* [Valgrind](#valgrind)
+* [Garbage Values](#garbage-values)
+* [Pointer Fun with Binky](#pointer-fun-with-binky)
+* [Swap](#swap)
+* [Overflow](#overflow)
+* [`scanf`](#scanf)
+* [Files](#files)
+* [Summing Up](#summing-up)
+
+## [Welcome!](#welcome)
 
 *   In previous weeks, we talked about images being made of smaller building blocks called pixels.
 *   Today, we will go into further detail about the zeros and ones that make up these images.

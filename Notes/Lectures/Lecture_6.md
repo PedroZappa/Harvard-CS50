@@ -1,7 +1,6 @@
-# [Lecture 6](#lecture-6): _`Python`_
+# [Lecture 6](/README.md): _`Python`_
 
-#### Return to [`CS50x`](/README.md)
-=======================
+## _`Table o'Contents`_
 
 *   [Welcome!](#welcome)
 *   [Python](#python)

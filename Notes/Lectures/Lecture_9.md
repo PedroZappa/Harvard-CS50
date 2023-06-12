@@ -1,5 +1,4 @@
-[Lecture 9](#lecture-9): _`Flask`_
-=======================
+# [Lecture 9](/README.md): _`Flask`_
 
 ## _`Table o'Contents`_
 

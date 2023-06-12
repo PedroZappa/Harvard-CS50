@@ -1,22 +1,18 @@
-[Lecture 2](#lecture-2): _`Arrays`_
-=======================
+[Lecture 2](/README.md): _`Arrays`_
 
-#### Return to [`CS50x`](/README.md)
+## _`Table o'Contents`_
 
-=======================
+* [Welcome!](#welcome)
+* [Compiling](#compiling)
+* [Debugging](#debugging)
+* [Arrays](#arrays)
+* [Strings](#strings)
+* [Command-Line Arguments](#command-line-arguments)
+* [Exit Status](#exit-status)
+* [Cryptography](#cryptography)
+* [Summing Up](#summing-up)
 
-*   [Welcome!](#welcome)
-*   [Compiling](#compiling)
-*   [Debugging](#debugging)
-*   [Arrays](#arrays)
-*   [Strings](#strings)
-*   [Command-Line Arguments](#command-line-arguments)
-*   [Exit Status](#exit-status)
-*   [Cryptography](#cryptography)
-*   [Summing Up](#summing-up)
-
-[Welcome!](#welcome)
---------------------
+## [Welcome!](#welcome)
 
 *   In our previous session, we learned about C, a text-based programming language.
 *   This week, we are going to take a deeper look at additional building-blocks that will support our goals of learning more about programming from the bottom up.

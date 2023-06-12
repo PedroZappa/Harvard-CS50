@@ -1,4 +1,4 @@
-# Section_7: _`HTML, CSS, JavaScript`_
+# [Section_7](/README.md): _`HTML, CSS, JavaScript`_
 
 Return to [`CS50x`](/README.md)
 

@@ -1,5 +1,6 @@
-[Lecture 0](#lecture-0): _`Scratch`_
-=======================
+# [Lecture 0](/README.md): _`Scratch`_
+
+## _`Table o'Contents`_
 
 *   [Welcome!](#welcome)
 *   [What’s Ahead](#whats-ahead)
@@ -19,8 +20,9 @@
 *   [More Sprites](#more-sprites)
 *   [Summing Up](#summing-up)
 
-[Welcome!](#welcome)
---------------------
+___
+
+## [Welcome!](#welcome)
 
 *   This class is about more than computer programming!
 *   Indeed, this class is about problem-solving in a way that is exceedingly empowering! You will likely take the problem solving that you learn here will likely be instantly applicable to your work beyond this course and even your career as a whole!

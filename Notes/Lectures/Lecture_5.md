@@ -1,8 +1,6 @@
-[Lecture 5](#lecture-5): _`Data Structures`_
-=======================
-#### Return to [`CS50x`](/README.md)
-=======================
-<center>
+# [Lecture 5](/README.md): _`Data Structures`_
+
+## _`Table o'Contents`_
 
 ## Table o'Contents
 [Welcome!](#welcome)
