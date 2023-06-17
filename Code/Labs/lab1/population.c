@@ -36,6 +36,5 @@ int main(void) {
         green, (int)start, reset, red, years, reset, blue, (int)end, reset
     );
 
-
     return 0;
 }
