@@ -24,11 +24,10 @@ int main(void) {
         years++;
     }
 
-    // ANSI escape sequences for colors for output
+    // ANSI escape sequences to color output
     const char *red = "\033[31m";
     const char *green = "\033[32m";
     const char *blue = "\033[34m";
-    const char *bold = "\033[ESC[1m";
     const char *reset = "\033[0m";
 
     printf(
