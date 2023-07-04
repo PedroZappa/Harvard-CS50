@@ -1,42 +1,63 @@
-#include <cs50.h>
+#include <stdbool.h>
 #include <stdio.h>
 
+// ANSI escape sequences to color output
+const char  *blackBright = "\033[90m";
+const char *cyan = "\033[36m";
+const char *reset = "\033[0m";
+
+// Declare function prototypes
 bool prime(int number);
 
+// Main: Print primes through user defined range
 int main(void)
 {
+    // Get user inputs for min and max
     int min;
     do
     {
-        min = get_int("Minimum: ");
+        printf("%sMinimum: %s", blackBright, reset);
+        scanf("%d", &min);
     }
     while (min < 1);
 
     int max;
     do
     {
-        max = get_int("Maximum: ");
+        printf("%sMaximum: %s", blackBright, reset);
+        scanf("%d", &max);
     }
     while (min >= max);
 
-    // Iterate through user defined range
+    // Print primes through user defined range
     for (int i = min; i <= max; i++)
     {
-        // If true, print to terminal
+        // If the current number is prime, print to terminal
         if (prime(i))
         {
-            printf("%i\n", i);
+            // Print a comma if not first or last number
+            if (i != min && i != max)
+            {
+                printf(", ");
+            }
+            printf("%s%i%s", cyan, i, reset);
         }
+        
     }
+    // Print a new line
+    printf("\n");
+    return 0;
 }
 
+// Boolean function to check if number is prime
 bool prime(int number)
 {
-    // TODO
+    // Check if number is less than 2
     if (number < 2)
     {
         return false;
     }
+    // Check if number is 2
     if (number == 2)
     {
         return true;
