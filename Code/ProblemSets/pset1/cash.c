@@ -1,7 +1,9 @@
 #include <stdio.h>
 
 // ANSI escape sequences to color output
+const char *bgWhite = "\033[47m";
 const char *blackBright = "\033[90m";
+const char *black = "\033[30m";
 const char *cyan = "\033[36m";
 const char *green = "\033[32m";
 const char *red = "\033[31m";
@@ -42,8 +44,8 @@ int main(void)
 
     // Print total number of coins to give the customer
     printf(
-        "%sTotal # coins to give the customer:%s %i\n", 
-        blackBright, reset, coins 
+        "Total # coins to give the customer: %s%i%s\n", 
+        blackBright, coins, reset
     );
     // Print quarters
     printf(
