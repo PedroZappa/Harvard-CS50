@@ -1,15 +1,34 @@
 // Become familiar wih C syntax
 // Learn to debug buggy code
-
-#include <cs50.h>
 #include <stdio.h>
+#include <string.h>
+
+#define MAX_SIZE 100
 
 int main(void)
 {
+    // Declare strings
+    char name[MAX_SIZE];
+    char location[MAX_SIZE];
+
     // Ask for your name and where live
-    string name = get_string("What is your name? ");
-    string location = get_string("Where do you live? ");
+    printf("What is your name? ");
+    fgets(name, MAX_SIZE, stdin);
+    // Remove newline character from name
+    name[strcspn(name, "\n")] = '\0';
+
+    printf("Where do you live? ");
+    fgets(location, MAX_SIZE, stdin);
+    // Remove newline character from location
+    location[strcspn(location, "\n")] = '\0';
+
+    // ANSI escape sequences to color output
+    const char *red = "\033[31m";
+    const char *blue = "\033[34m";
+    const char *reset = "\033[0m";
 
     // Say hello
-    printf("Hello, %s, from %s!\n", name, location);
+    printf("Hello %s%s%s, from %s%s%s!\n", red, name, reset, blue, location, reset);
+
+    return 0;
 }
