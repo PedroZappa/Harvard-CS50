@@ -1,11 +1,21 @@
 #include <stdio.h>
 
+// ANSI escape sequences to color output
+const char *blackBright = "\033[90m";
+const char *cyan = "\033[36m";
+const char *green = "\033[32m";
+const char *red = "\033[31m";
+const char *magenta = "\033[35m";
+const char *reset = "\033[0m";
+
+// Declare function prototypes
 int get_cents(void);
 int calculate_quarters(int cents);
 int calculate_dimes(int cents);
 int calculate_nickels(int cents);
 int calculate_pennies(int cents);
 
+// Main: Print total number of coins to give the customer
 int main(void)
 {
     // Ask how many cents the customer is owed
@@ -31,16 +41,40 @@ int main(void)
     int coins = quarters + dimes + nickels + pennies;
 
     // Print total number of coins to give the customer
-    printf("%i\n", coins);
+    printf(
+        "%sTotal # coins to give the customer:%s %i\n", 
+        blackBright, reset, coins 
+    );
+    // Print quarters
+    printf(
+        "%sQuarters:%s %s%i%s\n", 
+        blackBright, reset, magenta, quarters, reset
+    );
+    // Print dimes
+    printf(
+        "%sDimes:%s %s%i%s\n",
+        blackBright, reset, cyan, dimes, reset
+    );
+    // Print nickels
+    printf(
+        "%sNickels:%s %s%i%s\n",
+        blackBright, reset, red, nickels, reset
+    );
+    // Print pennies
+    printf(
+        "%sPennies:%s %s%i%s\n",
+        blackBright, reset, green, pennies, reset
+    );
 }
 
 int get_cents(void)
 {
-    int cents;
     // Get user input: must be a positive integer
+    int cents;
     do
     {
-        printf("Change owed: ");
+        printf("%sChange owed: %s", blackBright, reset);
+        // If scanf return value of 1, it means that the input was invalid
         if (scanf("%d", &cents) != 1)
         {
             // If scanf() couldn't scan an integer, consume invalid input and continue prompting
@@ -48,7 +82,6 @@ int get_cents(void)
             while ((c = getchar()) != '\n' && c != EOF) { }
         }
     }
-
     while (cents < 0);
 
     return (int) cents;

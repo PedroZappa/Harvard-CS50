@@ -2,6 +2,10 @@
 // Data types, operations, type casting, return value
 #include <stdio.h>
 
+// ANSI escape sequences to color output
+const char *cyan = "\033[36m";
+const char *reset = "\033[0m";
+
 // Declare function prototype for 'half'
 float half(float bill, float tax, int tip);
 
@@ -19,10 +23,6 @@ int main(void)
     int tip_percent;
     printf("Tip percent: ");
     scanf("%d", &tip_percent);
-
-    // ANSI escape sequences to color output
-    const char *cyan = "\033[36m";
-    const char *reset = "\033[0m";
 
     // Print the total amount owed, calculated by calling the 'half' function with the user's inputs
     printf(

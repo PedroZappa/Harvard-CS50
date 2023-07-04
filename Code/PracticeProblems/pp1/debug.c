@@ -3,6 +3,11 @@
 #include <stdio.h>
 #include <string.h>
 
+// ANSI escape sequences to color output
+const char *red = "\033[31m";
+const char *blue = "\033[34m";
+const char *reset = "\033[0m";
+
 #define MAX_SIZE 30
 
 int main(void)
@@ -21,11 +26,6 @@ int main(void)
     fgets(location, MAX_SIZE, stdin);
     // Remove newline character from location and insert null character by array indexing
     location[strcspn(location, "\n")] = '\0';
-
-    // ANSI escape sequences to color output
-    const char *red = "\033[31m";
-    const char *blue = "\033[34m";
-    const char *reset = "\033[0m";
 
     // Say hello
     printf("Hello %s%s%s, from %s%s%s!\n", red, name, reset, blue, location, reset);
