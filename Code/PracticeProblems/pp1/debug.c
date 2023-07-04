@@ -3,7 +3,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_SIZE 100
+#define MAX_SIZE 30
 
 int main(void)
 {
@@ -14,12 +14,12 @@ int main(void)
     // Ask for your name and where live
     printf("What is your name? ");
     fgets(name, MAX_SIZE, stdin);
-    // Remove newline character from name
+    // Remove newline character from name and insert null character by array indexing
     name[strcspn(name, "\n")] = '\0';
 
     printf("Where do you live? ");
     fgets(location, MAX_SIZE, stdin);
-    // Remove newline character from location
+    // Remove newline character from location and insert null character by array indexing
     location[strcspn(location, "\n")] = '\0';
 
     // ANSI escape sequences to color output
