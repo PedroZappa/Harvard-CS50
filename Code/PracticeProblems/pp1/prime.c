@@ -1,9 +1,13 @@
 #include <stdbool.h>
+#include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 // ANSI escape sequences to color output
-const char  *blackBright = "\033[90m";
+const char *blackBright = "\033[90m";
 const char *cyan = "\033[36m";
+const char *red = "\033[31m";
 const char *reset = "\033[0m";
 
 // Declare function prototypes
@@ -12,24 +16,72 @@ bool prime(int number);
 // Main: Print primes through user defined range
 int main(void)
 {
-    // Get user inputs for min and max
+    // Declare input as a string
+    char input[10];
+
+    // Get user inputs
+    // Get min
     int min;
     do
     {
         printf("%sMinimum: %s", blackBright, reset);
-        scanf("%d", &min);
+        fgets(input, sizeof(input), stdin);
+
+        // Loop through input min string
+        int i;
+        for (i = 0; i < strlen(input) - 1; i++)
+        {
+            // Break if character is not a digit
+            if (!isdigit(input[i]))
+            {
+                break;
+            }
+        }
+        // if i is the last character & i is greater than 0
+        if (i == strlen(input) - 1 && i > 0)
+        {
+            // Convert string to integer
+            min = atoi(input);
+        }
+        else
+        {
+            min = 0;
+        }
     }
     while (min < 1);
 
+    // Get max
     int max;
     do
     {
         printf("%sMaximum: %s", blackBright, reset);
-        scanf("%d", &max);
+        fgets(input, sizeof(input), stdin);
+
+        // Loop through input max string
+        int i;
+        for (i = 0; i < strlen(input) - 1; i++)
+        {
+            // Break if character is not a digit
+            if (!isdigit(input[i]))
+            {
+                break;
+            }
+        }
+        // if i is the last character & i is greater than 0
+        if (i == strlen(input) - 1 && i > 0)
+        {
+            // Convert string to integer
+            max = atoi(input);
+        }
+        else
+        {
+            max = 0;
+        }
     }
     while (min >= max);
 
     // Print primes through user defined range
+    int total_primes = 0;
     for (int i = min; i <= max; i++)
     {
         // If the current number is prime, print to terminal
@@ -41,11 +93,19 @@ int main(void)
                 printf(", ");
             }
             printf("%s%i%s", cyan, i, reset);
+            total_primes++;
         }
         
     }
     // Print a new line
     printf("\n");
+
+    // Print number of prime numbers printed
+    printf(
+        "There are %s%d%s primes between %s%i%s and %s%i%s.\n", 
+        red, total_primes, reset, blackBright, min, reset, blackBright, max, reset
+    );
+
     return 0;
 }
 

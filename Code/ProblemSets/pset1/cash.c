@@ -1,4 +1,3 @@
-#include <cs50.h>
 #include <stdio.h>
 
 int get_cents(void);
@@ -41,8 +40,15 @@ int get_cents(void)
     // Get user input: must be a positive integer
     do
     {
-        cents = get_int("Change owed: ");
+        printf("Change owed: ");
+        if (scanf("%d", &cents) != 1)
+        {
+            // If scanf() couldn't scan an integer, consume invalid input and continue prompting
+            int c;
+            while ((c = getchar()) != '\n' && c != EOF) { }
+        }
     }
+
     while (cents < 0);
 
     return (int) cents;
