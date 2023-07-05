@@ -1,8 +1,18 @@
 // (Hans Peter) Luhn's Algorithm [aka. Mod 10 Check]
 // Validates a credit card number (syntatically)
-#include <cs50.h>
-#include <stdio.h>
+// Credit card numbers for testing:
+// https://developer.paypal.com/api/nvp-soap/payflow/integration-guide/test-transactions/#standard-test-cards
 #include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+
+// ANSI escape sequences to color output
+const char *blackBright = "\033[90m";
+const char *cyan = "\033[36m";
+const char *green = "\033[32m";
+const char *red = "\033[31m";
+const char *yellow = "\033[33m";
+const char *reset = "\033[0m";
 
 // Function Prototypes
 int count_digits(long credit_card);
@@ -15,7 +25,12 @@ bool is_valid_visa(long credit_card, int num_digits);
 int main(void)
 {
     // Get Credit Card Number
-    long credit_card = get_long("Credit Card: ");
+    long credit_card;
+    printf(
+        "%sCredit Card: %s",
+        blackBright, reset
+    );
+    scanf("%ld", &credit_card);
 
     // Luhn's Algorithm
     int sum_every_other_digit = luhn_check(credit_card);
@@ -33,24 +48,24 @@ int main(void)
     // Print credit_card validity check results
     if (sum_every_other_digit % 10 != 0)
     {
-        printf("INVALID\n");
+        printf("%sINVALID%s\n", red, reset);
         return 0;
     }
     else if (amex == true)
     {
-        printf("AMEX\n");
+        printf("%sAMEX%s\n", cyan, reset);
     }
     else if (master == true)
     {
-        printf("MASTERCARD\n");
+        printf("%sMASTERCARD%s\n", green, reset);
     }
     else if (visa == true)
     {
-        printf("VISA\n");
+        printf("%sVISA%s\n", yellow, reset);
     }
     else
     {
-        printf("INVALID\n");
+        printf("%sINVALID%s\n", red, reset);
         return 0;
     }
 
@@ -160,8 +175,10 @@ int multi_sum(int last_digit)
     int sum = 0;
     while (multiply > 0)
     {
+        // Get last digit of multiply
         int last_digit_multiply = multiply % 10;
         sum += last_digit_multiply;
+        // Remove last digit from multiply
         multiply /= 10;
     }
     return sum;

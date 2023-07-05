@@ -16,7 +16,7 @@
 
 ___
 
-# ** [ [`CourseWork`](#coursework) ] **
+# ** [ [`CourseWork`](#top) ] **
 
   Module | Type          | Title
   :---:| :------------: | :---------:
@@ -91,7 +91,7 @@ ___
 ___
 ___
 
-# ** [ [`Notes`](#notes) ] ** 
+# ** [ [`Notes`](#top) ] ** 
 
   Module     | Topic           | Notes
   :--------: | :------:        | :---:
@@ -141,7 +141,7 @@ ___
 ___
 ___
 
-# [`Course Resources`](#course-resources)
+# [`Course Resources`](#top)
 
 Presented by EdX - https://www.edx.org/course/introduction-computer-science-harvardx-cs50x
 
