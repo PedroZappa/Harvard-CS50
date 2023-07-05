@@ -29,6 +29,7 @@ ___
   1    | Lab 1               | [Population](/Code/Labs/lab1/population.c)
   1    | Problem Set 1       | [Hello](/Code/ProblemSets/pset1/hello.c)
   1    | Problem Set 1       | [Mario-less](/Code/ProblemSets/pset1/mario-less.c)
+  1    | Problem Set 1       | [Mario-more](/Code/ProblemSets/pset1/mario-more.c)
   1    | Problem Set 1       | [Cash](/Code/ProblemSets/pset1/cash.c)
   1    | Problem Set 1       | [Credit](/Code/ProblemSets/pset1/credit.c)
   _ `Arrays` _  | |
