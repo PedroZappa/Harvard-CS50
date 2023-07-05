@@ -29,6 +29,7 @@ typedef struct {
 // Function prototypes
 PasswordState valid(char* password);
 
+
 // Main: Check if a password is valid
 int main(void)
 {
@@ -60,7 +61,6 @@ int main(void)
     }
 }
 
-// TODO: Complete the Boolean function below
 PasswordState valid(char* password)
 {
     PasswordState state = {
@@ -99,7 +99,6 @@ PasswordState valid(char* password)
     // Return true if all constrains are met
     if (state.isLower == true && state.isUpper == true && state.isNumber == true && state.isSymbol == true)
     {
-        // Return true if all bools == true
         state.valid = true;
     }
 
