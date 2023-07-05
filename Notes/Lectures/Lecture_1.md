@@ -94,7 +94,7 @@ int main(void)
 ```
         
     
-    Notice the semicolon is now gone.
+> Notice the semicolon is now gone.
     
 *   In your terminal window, run `make hello`. You will now be met with numerous errors! Placing the semicolon back in the correct position and running `make hello` again, the errors go away.
 *   Notice also the special symbol `\n` in your code. Try removing those characters and _making_ your program again by executing `make hello`. Typing `./hello` in the terminal window, how did your program change?
@@ -110,7 +110,7 @@ int main(void)
 ```
         
     
-    Notice the semicolon and `\n` have been restored.
+> Notice the semicolon and `\n` have been restored.
     
 *   The statement at the start of the code `#include <stdio.h>` is a very special command that tells the compile that you want to use the capabilities of _library_ called `stdio.h`. This allows you, among many other things, to utilize the `printf` function. You can read about all the capabilities of this library on the [Manual Pages](https://manual.cs50.io).
 *   It turns out that CS50 has its own library called `cs50.h`. Let’s use this library in your program.
@@ -133,7 +133,7 @@ int main(void)
 ```
         
     
-    Notice that `#include <cs50.h>` has been added to the top of your code. The `get_string` function is used to get a string from the user. Then, the variable `answer` is passed to the `printf` function. `%s` tells the `printf` function to prepare itself to receive a `string`.
+> Notice that `#include <cs50.h>` has been added to the top of your code. The `get_string` function is used to get a string from the user. Then, the variable `answer` is passed to the `printf` function. `%s` tells the `printf` function to prepare itself to receive a `string`.
     
 *   `answer` is a special holding place we call a _variable_. `answer` is of type `string` and can hold any string within it. There are many _data types_, such as `int`, `bool`, `char`, and many others.
 *   Running `make hello` again in the terminal window, you can run your program by typing `./hello`. The program now asks for your name and then says hello with your name attached.
@@ -161,7 +161,7 @@ int main(void)
 ```
         
     
-    Notice that we create two variables, an `int` or integer called `x` and another called `y`. The values of these are populated using the `get_int` function.
+> Notice that we create two variables, an `int` or integer called `x` and another called `y`. The values of these are populated using the `get_int` function.
     
 *   You can run your code by executing `make compare` in the terminal window, followed by `./compare`. If you get any error messages, check your code for errors.
 *   We can improve your program by coding as follows:
@@ -217,7 +217,7 @@ int main(void)
 ```
         
     
-    Notice that single quotes are utilized for single characters. Further, notice that `==` ensure that something _is equal_ to something else, where a single equal sign would have a very different function in C. Finally, notice that `||` effectively means _or_.
+> Notice that single quotes are utilized for single characters. Further, notice that `==` ensure that something _is equal_ to something else, where a single equal sign would have a very different function in C. Finally, notice that `||` effectively means _or_.
     
 *   You can test your code by typing `make agree` into the terminal window, followed by `./agree`.
 
@@ -239,7 +239,7 @@ int main(void)
 ```
         
     
-    Notice this does as intended but has an opportunity for better design.
+> Notice this does as intended but has an opportunity for better design.
     
 *   We can improve our program by modifying your code as follows:
     
@@ -258,7 +258,7 @@ int main(void)
 ```
         
     
-    Notice that we create an `int` called `i` and assign it the value `0`. Then, we create a `while` loop that will run as long as `i < 3`. Then, the loop runs. Every time `1` is added to `i` using the `i++` statement.
+> Notice that we create an `int` called `i` and assign it the value `0`. Then, we create a `while` loop that will run as long as `i < 3`. Then, the loop runs. Every time `1` is added to `i` using the `i++` statement.
     
 *   Similarly, we can implement a count-down of sorts by modifying our code as follows:
     
@@ -277,7 +277,7 @@ int main(void)
 ```
         
     
-    Notice how our counter `i` is started at `3`. Each time the loop runs, it will reduce the counter by `1`. Once the counter is less than zero, it will stop the loop.
+> Notice how our counter `i` is started at `3`. Each time the loop runs, it will reduce the counter by `1`. Once the counter is less than zero, it will stop the loop.
     
 *   We can further improve the design using a `for` loop. Modify your code as follows:
     
@@ -294,7 +294,7 @@ int main(void)
 ```
         
     
-    Notice that the `for` loop includes three arguments. The first argument `int i = 0` starts our counter at zero. The second argument `i < 3` is the condition that is being checked. Finally, the argument `i++` tells the loop to increment by one each time the loop runs.
+> Notice that the `for` loop includes three arguments. The first argument `int i = 0` starts our counter at zero. The second argument `i < 3` is the condition that is being checked. Finally, the argument `i++` tells the loop to increment by one each time the loop runs.
     
 *   We can even loop forever using the following code:
     
@@ -311,7 +311,7 @@ int main(void)
 }
 ```
   
-    Notice that `true` will always be the case. Therefore, the code will always run. You will lose control of your terminal window by running this code. You can break from an infinite by hitting `control-C` on your keyboard.
+> Notice that `true` will always be the case. Therefore, the code will always run. You will lose control of your terminal window by running this code. You can break from an infinite by hitting `control-C` on your keyboard.
 
 [Linux and the Command Line](#linux-and-the-command-line)
 ---------------------------------------------------------
@@ -354,7 +354,7 @@ int main(void)
 }
 ```
 
-    Notice how four question marks are printed here using a loop.
+> Notice how four question marks are printed here using a loop.
     
 *   Similarly, we can apply this same logic to be able to create three vertical blocks.
     
@@ -374,7 +374,7 @@ int main(void)
 }
 ```
 
-    Notice how three vertical bricks are printed using a loop.
+> Notice how three vertical bricks are printed using a loop.
     
 *   What if we wanted to combine these ideas to create a three-by-three group of blocks?
     
@@ -399,7 +399,7 @@ int main(void)
 ```
         
     
-    Notice that one loop is inside another. The first loop defines what vertical row is being printed. For each row, three columns are printed. After each row, a new line is printed.
+> Notice that one loop is inside another. The first loop defines what vertical row is being printed. For each row, three columns are printed. After each row, a new line is printed.
     
 *   What if we wanted to ensure that the number of blocks to be _constant_, that is, unchangeable? Modify your code as follows:
     
@@ -418,7 +418,7 @@ int main(void)
 }
 ```
     
-    Notice how `n` is now a constant. It can never be changed.
+> Notice how `n` is now a constant. It can never be changed.
     
 *   As illustrated earlier in this lecture, we can make our code prompt the user for the size of the grid. Modify your code as follows:
     
@@ -442,7 +442,7 @@ int main(void)
 ```
         
     
-    Notice that `get_int` is used to prompt the user.
+> Notice that `get_int` is used to prompt the user.
     
 *   A general piece of advice within programming is that you should never fully trust your user. They will likely misbehave, typing incorrect values where they should not. We can protect our program from bad behavior by checking to make sure the user’s input satisfies our needs. Modify your code as follows:
     
@@ -470,7 +470,7 @@ int main(void)
 }
 ```
 
-    Notice how the user is continuously prompted for the size until the user’s input is 1 or greater.
+> Notice how the user is continuously prompted for the size until the user’s input is 1 or greater.
     
 
 [Comments](#comments)
@@ -507,7 +507,7 @@ int main(void)
 }
 ```
 
-    Notice how each comment begins with a `//`.
+> Notice how each comment begins with a `//`.
     
 
 [Abstraction](#abstraction)
@@ -554,7 +554,7 @@ void print_grid(int n)
 }
 ```
 
-    Notice that we have three functions now. First, we have the `main` function that calls two other functions called `get_size` and `print_grid`. Second, we have a second function called `get_size` which includes the exact code we had to accomplish this task prior. Third, we have another function called `print_grid` that prints the grid. Because we abstracted away the essential problems within our program, our `main` function is very short.
+> Notice that we have three functions now. First, we have the `main` function that calls two other functions called `get_size` and `print_grid`. Second, we have a second function called `get_size` which includes the exact code we had to accomplish this task prior. Third, we have another function called `print_grid` that prints the grid. Because we abstracted away the essential problems within our program, our `main` function is very short.
 
 
 [Operators and Types](#operators-and-types)
@@ -597,7 +597,7 @@ int main(void)
 }
 ```
 
-    Notice how the `get_int` function is utilized to obtain an integer from the user twice. One integer is stored in the `int` variable called `x`. Another is stored in the `int` variable called `y`. Then, the `printf` function prints the value of `x + y`, designated by the `%i` symbol.
+> Notice how the `get_int` function is utilized to obtain an integer from the user twice. One integer is stored in the `int` variable called `x`. Another is stored in the `int` variable called `y`. Then, the `printf` function prints the value of `x + y`, designated by the `%i` symbol.
     
 *   As you are coding, pay special attention to the types of variables you are using to avoid problems within your code.
 
