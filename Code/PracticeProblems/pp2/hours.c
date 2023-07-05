@@ -90,6 +90,7 @@ int main(void)
     print_output(hours, weeks, output);
 }
 
+
 // Calculate Total Hours or Average Hours per Week
 float calc_hours(int *hours, int weeks, char output)
 {
