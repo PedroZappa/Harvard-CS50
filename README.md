@@ -28,7 +28,7 @@ ___
   1    | Practice Problems 1 | [Prime](/Code/PracticeProblems/pp1/prime.c)
   1    | Lab 1               | [Population](/Code/Labs/lab1/population.c)
   1    | Problem Set 1       | [Hello](/Code/ProblemSets/pset1/hello.c)
-  1    | Problem Set 1       | [Mario-less](/Code/ProblemSets/pset1/mario.c)
+  1    | Problem Set 1       | [Mario-less](/Code/ProblemSets/pset1/mario-less.c)
   1    | Problem Set 1       | [Cash](/Code/ProblemSets/pset1/cash.c)
   1    | Problem Set 1       | [Credit](/Code/ProblemSets/pset1/credit.c)
   _ `Arrays` _  | |
