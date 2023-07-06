@@ -1,18 +1,44 @@
-#include <cs50.h>
-#include <stdio.h>
-#include <string.h>
 #include <ctype.h>
 #include <math.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-int count_letters(string text);
-int count_words(string text);
-int count_sentences(string text);
+// ANSI escape sequences to color output
+const char *blackBright = "\033[90m";
+const char *cyan = "\033[36m";
+const char *green = "\033[32m";
+const char *red = "\033[31m";
+const char *yellow = "\033[33m";
+const char *magenta = "\033[35m";
+const char *reset = "\033[0m";
+
+// Declare function prototypes
+int count_letters(char* text);
+int count_words(char* text);
+int count_sentences(char* text);
 int coleman_liau(int letter_count, int word_count, int sentence_count);
+
+int MAX_LEN = 100;
+
 
 int main(void)
 {
+    // App title
+    printf("%sText Grade Calculator%s\n", cyan, reset);
     // Get user input
-    string text = get_string("Text: ");
+    char* text = malloc(MAX_LEN);
+    do
+    {
+        printf("%sText: %s", blackBright, reset);
+        if(!fgets(text, MAX_LEN, stdin)) {
+            printf("%sRead error or EOF reached.%s\n", red, reset);
+            free(text); // free allocated memory
+            return 1;   // Return error code
+        }
+        text[strcspn(text, "\n")] = 0; // remove trailing newline character
+
+    } while (strlen(text) == 0);
 
     int letter_count = count_letters(text); // Count Letters
     int word_count = count_words(text); // Count words;
@@ -24,23 +50,25 @@ int main(void)
     // If() to print out the correct grade
     if (cl_index >= 16)
     {
-        printf("\nGrade 16+\n");
+        printf("%sGrade 16+%s\n", green, reset);
     }
     else if (cl_index <= 1)
     {
-        printf("\nBefore Grade 1\n");
+        printf("%sBefore Grade 1%s\n", green, reset);
     }
     else
     {
-        printf("\nGrade %i\n", cl_index);
+        printf("%sGrade %i%s\n", green, cl_index, reset);
     }
 
-    // DEBUGGER
-    // printf("\n\nLetters: %i\nWords: %i\nSentences: %i\n", letter_count, word_count, sentence_count);
+    // Free allocated memory
+    free(text);
+
+    return 0;
 }
 
 // Count # of chars in a passed text
-int count_letters(string text)
+int count_letters(char* text)
 {
     int letter_count = 0;
     // Loop over each element in passed text
@@ -57,7 +85,7 @@ int count_letters(string text)
 }
 
 // Count # of words in a passed text
-int count_words(string text)
+int count_words(char* text)
 {
     int word_count = 0;
     // Loop over each element in passed text
@@ -74,7 +102,7 @@ int count_words(string text)
 }
 
 // Count # of sentences in a passed text
-int count_sentences(string text)
+int count_sentences(char* text)
 {
     int sentence_count = 0;
     char punct[3] = {'.', '!', '?'}; // Punctuation to check for
