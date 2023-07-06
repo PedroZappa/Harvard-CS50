@@ -3,16 +3,13 @@
 
 // ANSI escape sequences to color output
 const char *blackBright = "\033[90m";
-const char *cyan = "\033[36m";
-const char *green = "\033[32m";
-const char *red = "\033[31m";
-const char *yellow = "\033[33m";
-const char *magenta = "\033[35m";
 const char *reset = "\033[0m";
 
+// Constants
 const int MAX_LEN = 100;
 const int BITS_IN_BYTE = 8;
 
+// Function prototypes
 void print_bulb(int bit);
 
 int main(void)

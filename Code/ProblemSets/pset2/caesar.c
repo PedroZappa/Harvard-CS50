@@ -1,20 +1,35 @@
-#include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-int main(int argc, string argv[])
+// ANSI escape sequences to color output
+const char *blackBright = "\033[90m";
+const char *cyan = "\033[36m";
+const char *green = "\033[32m";
+const char *red = "\033[31m";
+const char *yellow = "\033[33m";
+const char *magenta = "\033[35m";
+const char *reset = "\033[0m";
+
+int MAX_LEN = 100;
+
+
+int main(int argc, char* argv[])
 {
     // check argc for the existence of argv[1]
     if (argc < 2)
     {
-        printf("\nNot enough args", argc);
+        printf("\n%d arg: %sNot enough args%s\n%sUsage:%s %s./caesar key%s\n", 
+            argc, red, reset, yellow, reset, green, reset
+        );
         return 1;
     }
     else if (argc > 2)
     {
-        printf("\nToo many args", argc);
+        printf("\n%d arg: %sNot enough args%s\n%sUsage:%s %s./caesar key%s\n", 
+            argc, red, reset, yellow, reset, green, reset
+        );
         return 1;
     }
     else if (argc == 2)
@@ -24,7 +39,7 @@ int main(int argc, string argv[])
         // If argc is NOT 2
         if (argc != 2 || argv[1] == NULL)
         {
-            printf("\nUsage: ./caesar key\n");
+            printf("\nUsage: %s./caesar key%s\n", yellow, reset);
             return 1;
         }
         else
@@ -32,7 +47,10 @@ int main(int argc, string argv[])
             // Check if key is a positive int
             while (key < 0)
             {
-                printf("Please enter a positive integer.\n");
+                printf(
+                    "Please enter a %spositive integer%s.\n%sUsage:%s %s./caesar key%s\n",
+                    red, reset, yellow, reset, green, reset
+                );
                 return 1;
             }
 
@@ -41,17 +59,29 @@ int main(int argc, string argv[])
                 // If argv[1][i] is NOT a digit
                 if (!isdigit(argv[1][i]))
                 {
-                    printf("\nKey not a digit!\nUsage: ./caesar key\n");
+                    printf(
+                        "\nKey %snot a digit%s!\n%sUsage:%s %s./caesar key%s\n",
+                        red, reset, yellow, reset, green, reset
+                    );
                     return 1;
                 }
             }
         }
 
         // Get user string
-        char *plaintext = get_string("plaintext: ");
+        char* plaintext = malloc(MAX_LEN);
+        printf("%splaintext: %s", blackBright, reset);
+        if (fgets(plaintext, MAX_LEN, stdin) == NULL) 
+        {
+            // Handle error or EOF condition here
+            printf("%sError reading input%s\n", red, reset);
+            // Free memory
+            free(plaintext);
+            return 1;
+        }
 
         // Encrypting user string
-        printf("ciphertext: ");
+        printf("%sciphertext: %s", blackBright, reset);
         // loop through chars string
         for (int i = 0, n = strlen(plaintext); i < n; i++)
         {
@@ -84,9 +114,10 @@ int main(int argc, string argv[])
 
         }
         printf("\n");
-        return 0;
 
-        // DEBUGGER
-        // printf("\n\nDEBUG:\nKey = %s\n", argv[1]);
+        // Free memory
+        free(plaintext);
+
+        return 0;
     }
 }
