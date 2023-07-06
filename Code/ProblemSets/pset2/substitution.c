@@ -1,12 +1,19 @@
-#include <cs50.h>
 #include <ctype.h>
+#include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-// Declare function prototypes
-bool verify_key(string s);
+// ANSI escape sequences to color output
+#define BLACKBRIGHT "\e[38;2;255;255;255;1m\e[48;2;0;0;0;1m"
+#define RESET "\e[0;39m"
 
-int main(int argc, string argv[])
+#define MAX_LEN 100
+
+// Declare function prototypes
+bool verify_key(char* s);
+
+int main(int argc, char* argv[])
 {
     // Check commandline args
     if (argc != 2 || !verify_key(argv[1]))
@@ -25,10 +32,17 @@ int main(int argc, string argv[])
     }
 
     // Get user input plaintext
-    string plaintext = get_string("plaintext: ");
+    char* plaintext = malloc(MAX_LEN);
+    printf("plaintext: ");
+    if (!fgets(plaintext, MAX_LEN, stdin))
+    {
+        // Free memory
+        free(plaintext);
+        return 1;
+    }
 
     // Print Cyphertext
-    printf("ciphertext: ");
+    printf(BLACKBRIGHT "ciphertext: " RESET);
 
     // Loop through chars of plaintext
     for (int i = 0, n = strlen(plaintext); i < n; i++)
@@ -55,10 +69,13 @@ int main(int argc, string argv[])
     }
     printf("\n");
 
+    // Free memory
+    free(plaintext);
+
     return 0;
 }
 
-bool verify_key(string key)
+bool verify_key(char* key)
 {
     // Check if len is alpohabet's length
     int len = strlen(key);

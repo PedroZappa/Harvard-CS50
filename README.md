@@ -41,6 +41,7 @@ ___
   2    | Problem Set 2       | [Bulbs](/Code/ProblemSets/pset2/bulbs.c)
   2    | Problem Set 2       | [Caesar](/Code/ProblemSets/pset2/caesar.c)
   2    | Problem Set 2       | [Substitution](/Code/ProblemSets/pset2/substitution.c)
+  2    | Problem Set 2       | [Wordle50](/Code/ProblemSets/pset2/wordle/wordle.c)
   _ `Algorithms` _ | |
   3    | Practice Problems 3 | [Recursive atoi](/Code/PracticeProblems/pp3/atoi.c)
   3    | Practice Problems 3 | [Average Temperature](/Code/PracticeProblems/pp3/temps.c)

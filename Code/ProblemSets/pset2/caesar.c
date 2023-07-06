@@ -14,7 +14,6 @@ const char *reset = "\033[0m";
 
 int MAX_LEN = 100;
 
-
 int main(int argc, char* argv[])
 {
     // check argc for the existence of argv[1]
