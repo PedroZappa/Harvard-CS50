@@ -15,20 +15,31 @@
  * Soda: $2
 */
 
-#include <cs50.h>
+// #include <cs50.h>
 #include <ctype.h>
 #include <stdio.h>
+#include <stdlib.h> // malloc() free()
 #include <string.h>
 #include <strings.h>
+
+// ANSI color codes for boxed in letters
+#define BLACKWHITE "\e[38;2;255;255;255;1m\e[48;2;0;0;0;1m"
+#define BLACKBRIGHT "\e[90m"
+#define RED "\e[31m"
+#define GREEN "\e[32m"
+#define YELLOW "\e[33m"
+#define CYAN "\e[36m"
+#define RESET "\e[0;39m"
 
 // Number of menu items
 // Adjust this value (10) to number of items input below
 #define NUM_ITEMS 10
+#define MAX_LEN 30
 
 // Menu itmes have item name and price
 typedef struct
 {
-    string item;
+    char *item;
     float price;
 }
 menu_item;
@@ -36,39 +47,58 @@ menu_item;
 // Array of menu items
 menu_item menu[NUM_ITEMS];
 
-// Add items to menu
-void add_items(void);
-
-// Calculate total cost
-float get_cost(string item);
+// Function prototypes
+void add_items(void); // Add items to menu
+float get_cost(char *item); // Calculate total cost
 
 int main(void)
 {
     add_items();
 
-    printf("\nWelcome to Beach Burger Shack!\n");
-    printf("Choose from the following menu to order. Press enter when done.\n\n");
+    printf(BLACKWHITE "Welcome to Beach Burger Shack!" RESET "\n");
+    printf(RED "Choose from the following menu to order." RESET " Press enter when done!\n\n");
 
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        printf("%s: $%.2f\n", menu[i].item, menu[i]. price);
+        printf(YELLOW "%s: " RESET " $%.2f\n", menu[i].item, menu[i]. price);
     }
     printf("\n");
 
+    // Get user input
     float total = 0;
-    while (true)
+    while (1)
     {
-        string item = get_string("Enter a food item: ");
-        if (strlen(item) == 0)
+        char *item = malloc(MAX_LEN);
+        printf(CYAN "Enter a food item: " RESET);
+        fgets(item, MAX_LEN, stdin);
+        if (item[0] == '\n')
         {
             printf("\n");
             break;
         }
+        // Remove the newline character from the input
+        item[strcspn(item, "\n")] = '\0';
+        // Strip leading whitespaces
+        while (isspace((unsigned char)item[0]))
+        {
+            memmove(item, item + 1, strlen(item));
+        }
+        // Strip trailing whitespaces
+        char *end = item + strlen(item) - 1; // Get the end of the string
+        while (end >= item && isspace((unsigned char)*end))
+        {
+            *end = '\0';
+            end--;
+        }
 
+        // Calculate total
         total += get_cost(item);
+
+        // Free the dynamically allocated memory
+        free(item);
     }
 
-    printf("Your total cost is: $%.2f\n", total);
+    printf(GREEN "Your total cost is: $%.2f\n" RESET, total);
 }
 
 // Add at least the first for items to the menu array
@@ -106,7 +136,7 @@ void add_items(void)
 }
 
 // Search through the menu array to find an item's cost
-float get_cost(string item)
+float get_cost(char *item)
 {
     for (int i = 0; i < NUM_ITEMS; i++)
     {
