@@ -5,10 +5,8 @@
 #include <string.h> // strlen() strcspn() memmove()
 
 // ANSI color codes for boxed in letters
-#define BLACKWHITE "\e[38;2;255;255;255;1m\e[48;2;0;0;0;1m"
 #define BLACKBRIGHT "\e[90m"
 #define GREEN "\e[32m"
-#define YELLOW "\e[33m"
 #define RED "\e[31m"
 #define RESET "\e[0;39m"
 
