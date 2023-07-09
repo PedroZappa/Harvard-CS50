@@ -71,7 +71,10 @@ int main(int argc, char *argv[])
         voter_count_str[strcspn(voter_count_str, "\n")] = '\0';
         // Convert voter_count_str to long int
         voter_count_long = strtol(voter_count_str, &end, 10);
-    } 
+    }
+    // while end points to the beginning of voter_count_str
+    // or *end is not the null character
+    // or voter_count_long is less than 0
     while (end == voter_count_str || *end != '\0' || voter_count_long < 0);
 
     // Loop over all voters

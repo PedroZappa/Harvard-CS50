@@ -1,10 +1,23 @@
-#include <cs50.h>
+// #include <cs50.h>
+#include <ctype.h> // isspace()
 #include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
+// ANSI color codes for boxed in letters
+#define BLACKWHITE "\e[38;2;255;255;255;1m\e[48;2;0;0;0;1m"
+#define BLACKBRIGHT "\e[90m"
+#define RED "\e[31m"
+#define GREEN "\e[32m"
+#define YELLOW "\e[33m"
+#define CYAN "\e[36m"
+#define RESET "\e[0;39m"
+
 // Max number of candidates
-#define MAX 9
+#define MAX 5
+#define MAX_LEN 30
+
 
 // preferences[i][j] is number of voters who prefer i over j
 int preferences[MAX][MAX];
@@ -21,14 +34,14 @@ typedef struct
 pair;
 
 // Array of candidates
-string candidates[MAX];
+char *candidates[MAX];
 pair pairs[MAX * (MAX - 1) / 2];
 
 int pair_count;
 int candidate_count;
 
 // Function prototypes
-bool vote(int rank, string name, int ranks[]);
+bool vote(int rank, char *name, int ranks[]);
 void record_preferences(int ranks[]);
 void add_pairs(void);
 void sort_pairs(void);
@@ -36,60 +49,113 @@ bool cycle_check(int start, int end);
 void lock_pairs(void);
 void print_winner(void);
 
-int main(int argc, string argv[])
+int main(int argc, char *argv[])
 {
+    // Title
+    printf(BLACKWHITE "Tideman Election!" RESET "\n");
+
     // Check for invalid usage
     if (argc < 2)
     {
-        printf("Usage: tideman [candidate ...]\n");
+        printf(BLACKBRIGHT "Usage: " RESET RED "./tideman [candidate ...]\n" RESET);
         return 1;
     }
 
     // Populate array of candidates
     candidate_count = argc - 1;
+    // Handle too many candidates
     if (candidate_count > MAX)
     {
-        printf("Maximum number of candidates is %i\n", MAX);
+        printf(BLACKBRIGHT "Maximum number of candidates is " RESET BLACKBRIGHT " %i\n" RESET, MAX);
         return 2;
     }
+    // Print Candidates
+    printf(GREEN "Candidates: " RESET); 
+
+    // Add args to array of candidates 
     for (int i = 0; i < candidate_count; i++)
     {
         candidates[i] = argv[i + 1];
+        printf(YELLOW "%s " RESET, candidates[i]);
+        if (i != candidate_count - 1)
+        {
+            printf(BLACKBRIGHT "|| " RESET);
+        }
     }
+    printf("\n");
 
-    // Clear graph of locked in pairs
+    // Loop through each candidate
     for (int i = 0; i < candidate_count; i++)
     {
+        // Loop through every other candidate
         for (int j = 0; j < candidate_count; j++)
         {
+            // Clear graph of locked in pairs
             locked[i][j] = false;
         }
     }
 
-    pair_count = 0;
-    int voter_count = get_int("Number of voters: ");
+    // Get number of voters, reprompt if invalid
+    char voter_count_str[MAX_LEN];
+    long voter_count_long;
+    char *end;
+    do
+    {
+        printf("Number of voters: ");
+        fgets(voter_count_str, MAX_LEN, stdin);
+        // Remove newline character from voter_count_str
+        voter_count_str[strcspn(voter_count_str, "\n")] = '\0';
+        // Convert voter_count_str to long int
+        voter_count_long = strtol(voter_count_str, &end, 10);
+
+    } 
+    while (*end != '\0' || voter_count_long < 0);
+    // type cast long to int
+    int voter_count = (int) voter_count_long; 
 
     // Query for votes
     for (int i = 0; i < voter_count; i++)
     {
+        // Print Header
+        printf(BLACKWHITE "[ Voter %i ]" RESET "\n", i + 1);
         // ranks[i] is voter's ith preference
         int ranks[candidate_count];
 
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
-            string name = get_string("Rank %i: ", j + 1);
+            char *name = malloc(MAX_LEN);
+            if (name == NULL)
+            {
+                printf(RED "Insufficient memory.\n" RESET);
+                return 1;
+            }
+            // Query current rank
+            printf(CYAN "Rank %i: " RESET, j + 1);
+            fgets(name, MAX_LEN, stdin);
+            // Remove newline from name
+            name[strcspn(name, "\n")] = '\0';
+            // Strip trailing whitespaces
+            char *end = name + strlen(name) - 1; // Get the end of the string
+            while (end >= name && isspace((unsigned char)*end))
+            {
+                *end = '\0';
+                end--;
+            }
+            // Strip leading whitespaces
+            while (isspace((unsigned char)name[0]))
+            {
+                memmove(name, name + 1, strlen(name));
+            }
 
             if (!vote(j, name, ranks))
             {
-                printf("Invalid vote.\n");
+                printf(RED "Invalid vote.\n" RESET);
                 return 3;
             }
         }
 
         record_preferences(ranks);
-
-        printf("\n");
     }
 
     add_pairs();
@@ -100,13 +166,13 @@ int main(int argc, string argv[])
 }
 
 // Update ranks given a new vote
-bool vote(int rank, string name, int ranks[])
+bool vote(int rank, char *name, int ranks[])
 {
     // Loop through candidates
     for (int i = 0; i < candidate_count; i++)
     {
         // If candidate is valid
-        if (strcmp(candidates[i], name) == 0)
+        if (strcasecmp(candidates[i], name) == 0)
         {
             // Add rank to ranks[]
             ranks[rank] = i;
@@ -169,7 +235,7 @@ void sort_pairs(void)
             // Compare the victory strength of the current pair `j` to the victory strength of the next pair `j+1`
             if (preferences[pairs[j].winner][pairs[j].loser] < preferences[pairs[j + 1].winner][pairs[j + 1].loser])
             {
-                // Sawp pairs if victory strength of 'j' is less than the victory strength of `j+1`
+                // if victory strength of 'j' is less than the victory strength of `j+1` swap them
                 pair temp = pairs[j];
                 pairs[j] = pairs[j + 1];
                 pairs[j + 1] = temp;
@@ -237,7 +303,7 @@ void print_winner(void)
                 // If whole col is false, candidate is source of graph
                 if (false_count == candidate_count)
                 {
-                    printf("%s\n", candidates[i]);
+                    printf(RED "%s" RESET BLACKWHITE " wins! " RESET "\n", candidates[i]);
                 }
             }
         }
