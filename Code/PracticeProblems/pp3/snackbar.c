@@ -60,7 +60,7 @@ int main(void)
 
     for (int i = 0; i < NUM_ITEMS; i++)
     {
-        printf(YELLOW "%s: " RESET " $%.2f\n", menu[i].item, menu[i]. price);
+        printf(YELLOW "%s: " RESET "$%.2f\n", menu[i].item, menu[i]. price);
     }
     printf("\n");
 

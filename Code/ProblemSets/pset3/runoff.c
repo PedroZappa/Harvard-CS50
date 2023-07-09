@@ -8,13 +8,16 @@ Instant Runoff Voting System.
         candidate with less votes is eliminated
     Re-Run election
 */
-#include <cs50.h>
+// #include <cs50.h>
+#include <stdbool.h>
 #include <stdio.h>
+#include <stdlib.h> // malloc()
 #include <string.h>
 
 // Max voters and candidates
 #define MAX_VOTERS 100
 #define MAX_CANDIDATES 9
+#define MAX_LEN 30
 
 // preferences[i][j] is jth preference for voter i
 int preferences[MAX_VOTERS][MAX_CANDIDATES];
@@ -22,7 +25,7 @@ int preferences[MAX_VOTERS][MAX_CANDIDATES];
 // Candidates have name, vote count, eliminated status
 typedef struct
 {
-    string name;
+    char *name;
     int votes;
     bool eliminated;
 }
@@ -36,14 +39,14 @@ int voter_count;
 int candidate_count;
 
 // Function prototypes
-bool vote(int voter, int rank, string name);
+bool vote(int voter, int rank, char *name);
 void tabulate(void);
 bool print_winner(void);
 int find_min(void);
 bool is_tie(int min);
 void eliminate(int min);
 
-int main(int argc, string argv[])
+int main(int argc, char *argv[])
 {
     // Check for invalid usage
     if (argc < 2)
@@ -67,12 +70,24 @@ int main(int argc, string argv[])
         candidates[i].eliminated = false;
     }
 
-    voter_count = get_int("Number of voters: ");
-    if (voter_count > MAX_VOTERS)
+    // Get number of voters
+    int voter_count;
+    printf("Number of voters: ");
+    if (scanf("%i", &voter_count) == 1) 
     {
-        printf("Maximum number of voters is %i\n", MAX_VOTERS);
-        return 3;
+        if (voter_count > MAX_VOTERS)
+        {
+            printf("Maximum number of voters is %i\n", MAX_VOTERS);
+            return 3;
+        }
     }
+    else
+    {
+        printf("Invalid number of voters.\n");
+        return 4;
+    }
+    // Consume the newline character
+    getchar();
 
     // Keep querying for votes
     for (int i = 0; i < voter_count; i++)
@@ -80,18 +95,33 @@ int main(int argc, string argv[])
         // Query for each rank
         for (int j = 0; j < candidate_count; j++)
         {
-            string name = get_string("Rank %i: ", j + 1);
+            char *name = malloc(sizeof(char) * MAX_LEN);
+            if (name == NULL)
+            {
+                printf("Unable to allocate memory.\n");
+                // Free memory
+                free(name);
+                return 4;
+            }
+            printf("Rank %i: ", j + 1);
+            fgets(name, sizeof(name), stdin);
+            // Remove newline from name
+            name[strcspn(name, "\n")] = '\0';
 
             // Record vote, unless it's invalid
             if (!vote(i, j, name))
             {
                 printf("Invalid vote.\n");
-                return 4;
+                // Free memory
+                free(name);
+                return 5;
             }
+            // Free memory
+            free(name);
         }
-
         printf("\n");
     }
+        
 
     // Keep holding runoffs until winner exists
     while (true)
@@ -132,13 +162,14 @@ int main(int argc, string argv[])
             candidates[i].votes = 0;
         }
     }
+
     return 0;
 }
 
 // Record preference if vote is valid
 // Loop through candidate_count and compare candidates[i].name to name
 // If name matches candidates[i].name then candidates[i].votes++
-bool vote(int voter, int rank, string name)
+bool vote(int voter, int rank, char *name)
 {
     /*
         for i from 0 to n-1
