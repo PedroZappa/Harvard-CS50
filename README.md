@@ -57,6 +57,7 @@ ___
   4    | Lab 4              | [Smiley](/Code/Labs/lab4/smiley/)
   4    | Lab 4              | [Volume](/Code/Labs/lab4/volume/)
   4    | Problem Set 4      | [Filter-less](/Code/ProblemSets/pset4/filter-less/)
+  4    | Problem Set 4      | [Filter-more](/Code/ProblemSets/pset4/filter-more/)
   4    | Problem Set 4      | [Recover](/Code/ProblemSets/pset4/recover/)
   _ `Data Structures` _ | |
   5    | Practice Problem 5 | [Trie](/Code/PracticeProblems/pp5/trie/)
