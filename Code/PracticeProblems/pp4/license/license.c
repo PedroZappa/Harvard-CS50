@@ -1,11 +1,21 @@
 #include <stdio.h>
 
+// ANSI color codes for boxed in letters
+#define BLACKWHITE "\e[38;2;255;255;255;1m\e[48;2;0;0;0;1m"
+#define BLACKYELLOW "\e[38;2;255;255;1m\e[48;2;0;0;0;1m"
+#define BLACKBRIGHT "\e[90m"
+#define RED "\e[38;2;255;0;0m"
+#define GREEN "\e[38;2;0;255;0m"
+#define YELLOW "\e[38;2;255;255;0m"
+#define CYAN "\e[38;2;0;255;255m"
+#define RESET "\e[0m"
+
 int main(int argc, char *argv[])
 {
     // Check for command line args
     if (argc != 2)
     {
-        printf("Usage: ./read infile\n");
+        printf(RED "Usage: " RESET GREEN "./read infile\n" RESET);
         return 1;
     }
 
@@ -18,6 +28,11 @@ int main(int argc, char *argv[])
 
     // Pointer to external file
     FILE *infile = fopen(argv[1], "r");
+    if (infile == NULL)
+    {
+        printf(RED "Could not open file.\n" RESET);
+        return 1;
+    }
 
     // to store index of each plates[] element
     int idx = 0;
@@ -38,6 +53,9 @@ int main(int argc, char *argv[])
         idx++;
     }
 
+    // Titles
+    printf(BLACKWHITE "Plates in " RESET BLACKYELLOW "%s" RESET BLACKWHITE " file:" RESET "\n", argv[1]);
+    // Print each plate
     for (int i = 0; i < 8; i++)
     {
         printf("%s\n", plates[i]);
