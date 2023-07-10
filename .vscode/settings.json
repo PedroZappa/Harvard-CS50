@@ -6,7 +6,8 @@
     "math.h": "c",
     "compare": "c",
     "type_traits": "c",
-    "stdbool.h": "c"
+    "stdbool.h": "c",
+    "bmp.h": "c"
 },
   "C_Cpp_Runner.msvcBatchPath": "",
   "C_Cpp_Runner.cCompilerPath": "gcc",
