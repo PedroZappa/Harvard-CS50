@@ -18,40 +18,49 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef uint8_t BYTE;
-typedef int16_t SAMPLE;
+// ANSI color codes for boxed in letters
+#define BLACKWHITE "\e[38;2;255;255;255;1m\e[48;2;0;0;0;1m"
+#define BLACKBRIGHT "\e[90m"
+#define RED "\e[31m"
+#define GREEN "\e[32m"
+#define YELLOW "\e[33m"
+#define CYAN "\e[36m"
+#define RESET "\e[0;39m"
 
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
+// Each HEADER BYTE is a uint8_t
+typedef uint8_t BYTE;
+// Each SAMPLE is an int16_t
+typedef int16_t SAMPLE;
 
 int main(int argc, char *argv[])
 {
     // Check command-line arguments
     if (argc != 4)
     {
-        printf("Usage: ./volume input.wav output.wav factor\n");
+        printf(RED "Usage: " RESET GREEN "./volume input.wav output.wav factor\n" RESET);
         return 1;
     }
 
-    // Open files and determine scaling factor
+    // Open input and output files
     FILE *input = fopen(argv[1], "r");
     if (input == NULL)
     {
-        printf("Could not open file.\n");
+        printf(RED "Could not open file.\n" RESET);
         return 1;
     }
-
     FILE *output = fopen(argv[2], "w");
     if (output == NULL)
     {
-        printf("Could not open file.\n");
+        printf(RED "Could not open file.\n" RESET);
         return 1;
     }
 
-    // Camculate volume scaling
+    // Calculate volume scaling factor
     float factor = atof(argv[3]);
 
-    // TODO: Copy header (44-bytes) from input file to output file
+    // TODO: Copy wav header (44-bytes) from input file to output file
     BYTE header_buffer[HEADER_SIZE];
     // Read input Header into buffer
     fread(&header_buffer, HEADER_SIZE, 1, input);
@@ -60,7 +69,7 @@ int main(int argc, char *argv[])
 
     // TODO: Read samples from input file and write updated data to output file
     SAMPLE sample_buffer;
-    // Read sample from input into buffer
+    // Read from input into buffer 1 sample at a time
     while (fread(&sample_buffer, sizeof(SAMPLE), 1, input) == 1)
     {
         // Multiply sample by volume factor
@@ -68,6 +77,9 @@ int main(int argc, char *argv[])
         // Write new sample into output file
         fwrite(&sample_buffer, sizeof(SAMPLE), 1, output);
     }
+
+    // Success
+    printf(GREEN "Successfully modified audio file's volume by factor of %.2f.\n" RESET, factor);
 
     // Close files
     fclose(input);
