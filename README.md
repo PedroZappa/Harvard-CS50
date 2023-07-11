@@ -59,6 +59,7 @@ ___
   4    | Problem Set 4      | [Filter-less](/Code/ProblemSets/pset4/filter-less/)
   4    | Problem Set 4      | [Filter-more](/Code/ProblemSets/pset4/filter-more/)
   4    | Problem Set 4      | [Recover](/Code/ProblemSets/pset4/recover/)
+  4    | Problem Set 4      | [Reverse](/Code/ProblemSets/pset4/reverse/)
   _ `Data Structures` _ | |
   5    | Practice Problem 5 | [Trie](/Code/PracticeProblems/pp5/trie/)
   5    | Lab 5              | [Inheritance](/Code/Labs/lab5/inheritance.c)
