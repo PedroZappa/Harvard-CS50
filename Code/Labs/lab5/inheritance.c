@@ -5,6 +5,16 @@
 #include <stdlib.h>
 #include <time.h>
 
+// ANSI color codes for boxed in letters
+#define BLACKWHITE "\e[38;2;255;255;255;1m\e[48;2;0;0;0;1m"
+#define BLACKYELLOW "\e[38;2;255;255;1m\e[48;2;0;0;0;1m"
+#define BLACKBRIGHT "\e[90m"
+#define RED "\e[38;2;255;0;0m"
+#define GREEN "\e[38;2;0;255;0m"
+#define YELLOW "\e[38;2;255;255;0m"
+#define CYAN "\e[38;2;0;255;255m"
+#define RESET "\e[0m"
+
 // Each person has two parents and two alleles
 typedef struct person
 {
@@ -61,7 +71,6 @@ person *create_family(int generations)
         child->alleles[0] = child->parents[0]->alleles[rand() % 2];
         child->alleles[1] = child->parents[1]->alleles[rand() % 2];
     }
-
     // If there are no generations left to create (No parent data)
     else
     {
@@ -93,7 +102,6 @@ void free_family(person *p)
 
     // TODO: Free child
     free(p);
-
 }
 
 // Print each family member and their alleles.
@@ -114,11 +122,17 @@ void print_family(person *p, int generation)
     // Print person
     if (generation == 0)
     {
-        printf("Child (Generation %i): blood type %c%c\n", generation, p->alleles[0], p->alleles[1]);
+        printf(
+            BLACKWHITE "Child" RESET BLACKBRIGHT " (Generation %i): " RESET RED "blood type " RESET GREEN"%c%c\n" RESET, 
+            generation, p->alleles[0], p->alleles[1]
+        );
     }
     else if (generation == 1)
     {
-        printf("Parent (Generation %i): blood type %c%c\n", generation, p->alleles[0], p->alleles[1]);
+        printf(
+            BLACKWHITE "Parent" RESET BLACKBRIGHT " (Generation %i): " RESET RED "blood type " RESET GREEN "%c%c\n" RESET, 
+            generation, p->alleles[0], p->alleles[1]
+        );
     }
     else
     {
@@ -126,7 +140,10 @@ void print_family(person *p, int generation)
         {
             printf("Great-");
         }
-        printf("Grandparent (Generation %i): blood type %c%c\n", generation, p->alleles[0], p->alleles[1]);
+        printf(
+            BLACKWHITE "Grandparent" RESET BLACKBRIGHT " (Generation %i): " RESET RED "blood type " RESET GREEN "%c%c\n" RESET, 
+            generation, p->alleles[0], p->alleles[1]
+        );
     }
 
     // Print parents of current generation
