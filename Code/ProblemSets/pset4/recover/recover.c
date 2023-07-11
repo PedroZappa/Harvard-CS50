@@ -3,6 +3,16 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+// ANSI color codes for boxed in letters
+#define BLACKWHITE "\e[38;2;255;255;255;1m\e[48;2;0;0;0;1m"
+#define BLACKYELLOW "\e[38;2;255;255;1m\e[48;2;0;0;0;1m"
+#define BLACKBRIGHT "\e[90m"
+#define RED "\e[38;2;255;0;0m"
+#define GREEN "\e[38;2;0;255;0m"
+#define YELLOW "\e[38;2;255;255;0m"
+#define CYAN "\e[38;2;0;255;255m"
+#define RESET "\e[0m"
+
 #define BLOCK_SIZE 512
 
 typedef uint8_t BYTE;
@@ -13,7 +23,7 @@ int main(int argc, char *argv[])
     if (argc != 2)
     {
         // Print error message if the program is not given the correct # of args
-        printf("Usage: ./recover IMAGE\n");
+        printf(RED "Usage: " RESET GREEN "./recover IMAGE\n" RESET);
         return 1;
     }
 
@@ -23,7 +33,7 @@ int main(int argc, char *argv[])
     if (raw_file == NULL)
     {
         // Print an error messsage to standard error if imagecannot be opened.
-        printf("Could not open %s.\n", file);
+        printf(RED "Could not open %s.\n" RESET, file);
         return 2;
     }
     
@@ -38,11 +48,14 @@ int main(int argc, char *argv[])
     while (fread(buffer, BLOCK_SIZE, 1, raw_file) == 1)
     {
         // Check if this block marks the start of a new JPEG
+        // ( the first three bytes of JPEGs are 0xff 0xd8 0xff )
+        // ( The fourth byte, meanwhile, is either 0xe0, 0xe1, 0xe2, 0xe3, 0xe4, 0xe5, 0xe6, 0xe7, 0xe8, 0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, or 0xef )
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            // Close the previous JPEG file, if one was open
+            // Check if jpg file is already open from prev iteration
             if (found_jpg)
             {
+                // Close the previous JPEG file
                 fclose(outptr);
             }
             else 
@@ -56,7 +69,7 @@ int main(int argc, char *argv[])
             {
                 // Print error if the new JPEG image file cannot be created
                 fclose(raw_file);
-                printf("Could not create %s.\n", jpg_name);
+                printf(RED "Could not create %s.\n" RESET, jpg_name);
                 return 3;
             }
             jpg_count++; // Increment the jpg_count variable
@@ -69,10 +82,13 @@ int main(int argc, char *argv[])
     }
     // close the forensic image file and the last JPEG file, if one was open
     fclose(raw_file);
+    // Close the last JPEG outptr file
     if (found_jpg)
     {
         fclose(outptr);
     }
+    // Print REcovey Stats
+    printf("Recovered" GREEN " %i " RESET YELLOW "JPEGs " RESET "from " RED "%s\n" RESET, jpg_count, file);
     // Exit the program: 
     return 0;
 }
