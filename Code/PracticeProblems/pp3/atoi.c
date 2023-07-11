@@ -22,8 +22,8 @@ int main(void)
     {
         printf(BLACKBRIGHT "Enter a positive integer: " RESET);
         fgets(input, MAX_LEN, stdin);
-        // Reprompt if input is empty
-    } while (input[0] == '\n');
+    } 
+    while (input[0] == '\n'); // Reprompt if input is empty
     
     // Check if input is empty
     if (strlen(input) == 0)
